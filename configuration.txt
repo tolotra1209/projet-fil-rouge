@@ -1,61 +1,64 @@
-# projet-fil-rouge
-#declaration des variables 
+# Déclaration des types d'enregistrements
 Type1 
     parametre = Enregistrement
                     langue:chaine de caractere
                     couleur:couleur
                     preference:chaine de caractere
                 Finenreg
+
 Type2
     couleur = Enregistrement
                     choix1:chaine de caractere
                     choix2:chaine de caractere
                     choix3:chaine de caractere
               Finenreg
-              
-variable
-parametreUtilisateur: parametre
-langueParDefaut='Anglais'
-couleurParDefaut='Rouge','Bleue','Verte'
-choix1ParDefaut='Rouge'
-choix2ParDefaut='Bleue'
-choix3ParDefaut='Verte'
-preferenceParDefaut='Preference'       
 
-#corps du programme
+# Déclaration des variables
+variable
+    parametreUtilisateur: parametre
+    langueParDefaut='Anglais'
+    choix1ParDefaut='Rouge'
+    choix2ParDefaut='Bleue'
+    choix3ParDefaut='Verte'
+    couleurParDefaut=[choix1ParDefaut, choix2ParDefaut, choix3ParDefaut]
+    preferenceParDefaut='Preference'
+
+# Corps du programme
 Debut
     Ecrire("Veuillez entrer une langue:")
-    Lire(parametre.langue)
+    Lire(parametreUtilisateur.langue)
     Ecrire("Veuillez entrer le premier choix de couleur:")
-    Lire(couleur.choix1)
+    Lire(parametreUtilisateur.couleur.choix1)
     Ecrire("Veuillez entrer le deuxieme choix de couleur:")
-    Lire(couleur.choix2)
+    Lire(parametreUtilisateur.couleur.choix2)
     Ecrire("Veuillez entrer le troisieme choix de couleur:")
-    Lire(couleur.choix3)
-    Ecrire(parametre.couleur)
+    Lire(parametreUtilisateur.couleur.choix3)
+    Ecrire(parametreUtilisateur.couleur)
 Fin
 
+# Procédure pour configurer la langue
 Procedure configLangue()
-si langueSaisie != langueParDefaut faire
-    parametre.langue=langueSaisie
-sinon si langueSaisie = langueParDefaut faire
-    parametre.langue='Anglais'
-sinon
-    ecrire("la langue saisie est invalide")
+    si parametreUtilisateur.langue != langueParDefaut faire
+        parametreUtilisateur.langue = langueSaisie
+    sinon si parametreUtilisateur.langue = langueParDefaut faire
+        parametreUtilisateur.langue = 'Anglais'
+    sinon
+        ecrire("La langue saisie est invalide")
 
+# Procédure pour configurer la couleur
 Procedure configCouleur()
-si couleurSaisie != couleurParDefaut faire
-    parametre.couleur=couleurSaisie
-sinon si couleurSaisie = couleurParDefaut faire
-    parametre.couleur='Rouge'
-sinon
-    ecrire("la couleur saisie est invalide")
+    si parametreUtilisateur.couleur != couleurParDefaut faire
+        parametreUtilisateur.couleur = couleurSaisie
+    sinon si parametreUtilisateur.couleur = couleurParDefaut faire
+        parametreUtilisateur.couleur = 'Rouge'
+    sinon
+        ecrire("La couleur saisie est invalide")
 
+# Procédure pour configurer la préférence
 Procedure configPreference()
-si preferenceSaisie != preferenceParDefaut faire
-    parametre.preference=preferenceSaisie
-sinon si preferenceSaisie = preferenceParDefaut faire
-    parametre.preference='Preference'
-sinon
-    ecrire("la preference saisie est invalide")      
-        
+    si parametreUtilisateur.preference != preferenceParDefaut faire
+        parametreUtilisateur.preference = preferenceSaisie
+    sinon si parametreUtilisateur.preference = preferenceParDefaut faire
+        parametreUtilisateur.preference = 'Preference'
+    sinon
+        ecrire("La préférence saisie est invalide")
