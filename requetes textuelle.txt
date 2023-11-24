@@ -1,0 +1,42 @@
+ Variable : 
+requête : Chaîne de caractère
+
+  
+ /.Demander à l'utilisateur de saisir une requête textuelle. ./
+   ecrire ("Donner une requête textuelle")
+   lire requête
+
+
+   /.Vérifier la langue de la requête./
+   SI la requête contient des mots en français
+      ALORS traiter la requête en français
+   SINON SI la requête contient des mots en anglais
+      ALORS traiter la requête en anglais
+   SINON
+      AFFICHER "Langue non reconnue"
+
+   /.Traiter la requête./
+   SI la requête contient "Avance" OU "Move forward"
+      ALORS AFFICHER "Action : Avancer"
+   SINON SI la requête contient "Tourne à gauche" OU "Turn left"
+      ALORS AFFICHER "Action : Tourner à gauche"
+   SINON SI la requête contient "Tourne à droite" OU "Turn right"
+      ALORS AFFICHER "Action : Tourner à droite"
+   SINON SI la requête contient "Tourne à" ET "à droite"
+      ALORS extraire l'angle de la requête
+           AFFICHER "Action : Tourner de angle degrés à droite"
+   SINON SI la requête contient "Avance jusqu’à" OU "Advance to"
+      ALORS AFFICHER "Action : Avancer jusqu'à un point spécifié"
+   SINON SI la requête contient "Avance de" ET "mètres"
+      ALORS extraire la distance de la requête
+           AFFICHER "Action : Avancer de distance mètres"
+   SINON SI la requête contient "Passe entre" OU "pass between"
+      ALORS AFFICHER "Action : Passer entre deux points spécifiés"
+   SINON SI la requête contient "Contourne l’obstacle par la droite" OU "Go around the obstacle to the right"
+      ALORS AFFICHER "Action : Contourner l'obstacle par la droite"
+   SINON SI la requête contient "Contourne l’obstacle par la gauche" OU "Go around the obstacle to the left"
+      ALORS AFFICHER "Action : Contourner l'obstacle par la gauche"
+   SINON SI la requête contient "Arrêt" OU "Stop"
+      ALORS AFFICHER "Action : Arrêt"
+   SINON
+      AFFICHER "Requête non reconnue"
