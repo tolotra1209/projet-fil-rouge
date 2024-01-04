@@ -1,0 +1,134 @@
+# projet-fil-rouge Analyse Requete Textuelle
+
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+// Fonction pour nettoyer le texte
+void NettoyerInstruction(char *instruction) {
+    // suppression de la ponctuation,
+    // mise en minuscules,
+    // Exemple : SupprimerPonctuation(instruction);
+    // Exemple : ConvertirMinuscules(instruction);
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+// Fonction pour supprimer la ponctuation d'une chaîne de caractères
+void SupprimerPonctuation(char *chaine) {
+    int longueur = strlen(chaine);
+    for (int i = 0; i < longueur; i++) {
+        if (ispunct(chaine[i])) {
+            // Remplacer la ponctuation par un espace
+            chaine[i] = ' ';
+        }
+    }
+}
+
+// Fonction pour convertir une chaîne de caractères en minuscules
+void ConvertirMinuscules(char *chaine) {
+    int longueur = strlen(chaine);
+    for (int i = 0; i < longueur; i++) {
+        chaine[i] = tolower(chaine[i]);
+    }
+}
+
+int main() {
+    // Exemple d'utilisation
+    char texte[] = "Ceci est, un Exemple !";
+    
+    // Supprimer la ponctuation
+    SupprimerPonctuation(texte);
+    printf("Sans ponctuation : %s\n", texte);
+
+    // Convertir en minuscules
+    ConvertirMinuscules(texte);
+    printf("En minuscules : %s\n", texte);
+
+    return 0;
+}
+
+}
+
+// Fonction pour extraire l'angle à partir des mots-clés
+char* ExtraireAngle(char** mots_cles, int taille) {
+    char* angle = "";
+    for (int i = 0; i < taille; i++) {
+        // Vérifier si le mot est un nombre
+        // Cette vérification est simplifiée ici
+        if (EstNombre(mots_cles[i])) {
+            angle = mots_cles[i];
+            break; // Sortir de la boucle une fois que l'angle est trouvé
+        }
+    }
+    return angle;
+}
+
+// Fonction pour extraire la cible à partir des mots-clés
+char* ExtraireCible(char** mots_cles, int taille) {
+    char* cible = "";
+    for (int i = 0; i < taille; i++) {
+        if (strcmp(mots_cles[i], "jusqu'à") == 0 && i < taille - 1) {
+            cible = mots_cles[i + 1];
+            break;
+        }
+    }
+    return cible;
+}
+
+// Fonction pour vérifier si un mot est un nombre
+bool EstNombre(const char* mot) {
+    // Vérifier si le mot est un nombre
+    // Cette vérification est simplifiée
+    // Vous pourriez utiliser des fonctions plus avancées pour cette vérification
+    return sscanf(mot, "%*f") == 1;
+}
+
+// Fonction pour extraire la direction à partir des mots-clés
+char* ExtraireDirection(char** mots_cles, int taille) {
+    char* direction = "";
+    for (int i = 0; i < taille; i++) {
+        if (strcmp(mots_cles[i], "droite") == 0 || strcmp(mots_cles[i], "gauche") == 0) {
+            direction = mots_cles[i];
+            break;
+        }
+    }
+    return direction;
+}
+
+// Fonction principale pour exécuter l'action
+char* ExecuterAction(char** mots_cles, int taille) {
+    // Interpréter les mots clés et générer une action à effectuer.
+    // L'utilisateur saisit une action
+    char* action = " ";
+    if (strstr(mots_cles, "avance")) {
+        strcat(action, "Avancer");
+        if (strstr(mots_cles, "d'un mètre")) {
+            strcat(action, " d'un mètre");
+        }
+    } else if (strstr(mots_cles, "tourne") && strstr(mots_cles, "degrés")) {
+        char* angle = ExtraireAngle(mots_cles, taille);
+        char* direction = ExtraireDirection(mots_cles, taille);
+        strcat(action, "Tourner de ");
+        strcat(action, angle);
+        strcat(action, " degrés vers la ");
+        strcat(action, direction);
+    } else if (strstr(mots_cles, "avance") && strstr(mots_cles, "jusqu'à")) {
+        char* cible = ExtraireCible(mots_cles, taille);
+        strcat(action, "Avancer jusqu'à la ");
+        strcat(action, cible);
+    } else if (strstr(mots_cles, "contourne") && strstr(mots_cles, "cible")) {
+        strcat(action, "Contourner la cible");
+    }
+    return action;
+}
+
+int main() {
+    // Exemple d'utilisation
+    char* mots_cles[] = {"avance", "d'un mètre"};
+    int taille = sizeof(mots_cles) / sizeof(mots_cles[0]);
+    char* action = ExecuterAction(mots_cles, taille);
+    printf("Action : %s\n", action);
+
+    return 0;
+}
