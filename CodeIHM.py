@@ -10,7 +10,7 @@ menu_aides = tkinter.Menu(menu_pfr, tearoff = 0)
 menu_quitter = tkinter.Menu(menu_pfr, tearoff = 0)
 menu_pfr.add_cascade(label = "Langues", menu = menu_langues)
 menu_pfr.add_cascade(label = "Aides", menu = menu_aides)
-menu_pfr.add_cascade(label = "Quitter", menu = menu_quitter)
+
 
 #Mettre les éléments dans la cascade
 menu_aides.add_command(label = "Manuel")
