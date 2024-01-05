@@ -24,3 +24,13 @@ fenetre.config(menu = menu_pfr)
 
 #Afficher la fenetre
 fenetre.mainloop()
+
+#Ouvrir nouvelle fenetre
+from tkinter import *   
+def create():
+    win = Toplevel(root)
+root = Tk()
+root.geometry('200x100')  
+btn = Button(root, text="Créer une nouvelle fenêtre", command = create)
+btn.pack(pady = 10) 
+root.mainloop()
