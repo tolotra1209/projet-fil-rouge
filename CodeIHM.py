@@ -1,5 +1,6 @@
 import tkinter
 fenetre = tkinter.Tk()
+fenetre.geometry("400x250")
 
 #Creer la barre de menu
 menu_pfr = tkinter.Menu(fenetre)
