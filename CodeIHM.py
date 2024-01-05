@@ -22,5 +22,11 @@ menu_langues.add_command(label = "German")
 #Emplacement du menu
 fenetre.config(menu = menu_pfr)
 
+#Creer bouton
+quitter = tkinter.Button(fenetre, text="Cliquez ici pour quitter", command=fenetre.destroy)
+
+#Afficher bouton
+quitter.pack()
+
 #Afficher la fenetre
 fenetre.mainloop()
