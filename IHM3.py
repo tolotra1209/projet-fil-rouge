@@ -18,8 +18,8 @@ liste.pack()
 
 label=Label(fenetre, text="Veuillez saisir une langue: ")
 label.pack()
-entree=Entry(fenetre)
-entree.pack()
+langue_choisie=Entry(fenetre)
+langue_choisie.pack()
 
 #fonction couleur
 def anglais_couleur():
@@ -72,7 +72,7 @@ def anglais_lexique():
     fenetre.mainloop()
     
 def recup_langue():
-    recup_langue=entree.get()
+    recup_langue=langue_choisie.get()
     #anglais
     if recup_langue == "Anglais":
         fenetre = Tk()
@@ -128,7 +128,7 @@ def recup_langue():
     
 
 
-bouton1=Button(fenetre, text="Valider", command=entree1)
+bouton1=Button(fenetre, text="Valider", command=recup_langue)
 bouton1.pack()
 
 
