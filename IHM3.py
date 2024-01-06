@@ -207,7 +207,7 @@ def allemand_couleur():
     liste.insert(3, "Blau")
     liste.pack()
 
-    label=Label(fenetre, text="Geben Sie eine Farbe ein : ")
+    label=Label(fenetre, text="Geben Sie ein Hindernis ein : ")
     label.pack()
     couleur_choisie=Entry(fenetre)
     couleur_choisie.pack()
