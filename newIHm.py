@@ -52,16 +52,12 @@ def afficher1():
     #Emplacement du menu
     fenetre.config(menu = menu_pfr)
     
-    liste=Listbox(fenetre)
-    liste.insert(1, "Anglais")
-    liste.insert(2, "Français")
-    liste.insert(3, "Allemand")
-    liste.insert(4, "Espagnol")
-
-    liste.pack()
-    
     #bouton
-    bouton=Button(fenetre, text="Appliquer")
+    bouton=Button(fenetre, text="Français")
+    bouton.pack()
+    bouton=Button(fenetre, text="")
+    bouton.pack()
+    bouton=Button(fenetre, text="Français")
     bouton.pack()
     bouton=Button(fenetre, text="Initialiser")
     bouton.pack()
@@ -247,18 +243,5 @@ f=font.Font(size=18)
 bouton=Button(fenetre, text="LANGUE", command=afficher1,width=10,height=2)
 bouton["font"]=f
 bouton.pack()
-
-#bouton couleur
-f=font.Font(size=18)
-bouton=Button(fenetre, text="COULEUR", command=afficher2,width=10,height=2)
-bouton["font"]=f
-bouton.pack()
-
-#bouton lexique
-f=font.Font(size=18)
-bouton=Button(fenetre, text="LEXIQUE", command=afficher3,width=10,height=2)
-bouton["font"]=f
-bouton.pack()
-
 
 fenetre.mainloop()

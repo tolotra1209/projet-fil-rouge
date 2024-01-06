@@ -132,4 +132,24 @@ bouton5.place(x=425,y=275)
 bouton6=Button(fenetre, text="Appliquer")
 bouton6.place(x=500,y=275)
 
+#bouton couleur
+f=font.Font(size=18)
+bouton=Button(fenetre, text="COULEUR", command=afficher2,width=10,height=2)
+bouton["font"]=f
+bouton.pack()
+
+#bouton lexique
+f=font.Font(size=18)
+bouton=Button(fenetre, text="LEXIQUE", command=afficher3,width=10,height=2)
+bouton["font"]=f
+bouton.pack()
+
+liste=Listbox(fenetre)
+liste.insert(1, "Anglais")
+liste.insert(2, "Français")
+liste.insert(3, "Allemand")
+liste.insert(4, "Espagnol")
+
+liste.pack()
+
 fenetre.mainloop()
