@@ -37,37 +37,40 @@ def anglais_couleur():
 
     label=Label(fenetre, text="Please enter a color: ")
     label.pack()
-    entree=Entry(fenetre)
-    entree.pack()
+    couleur_choisie=Entry(fenetre)
+    couleur_choisie.pack()
 
     fenetre.mainloop()    
 
 #fonction lexique
 def anglais_lexique():
-    fenetre= Tk()
+    fenetre = Tk()
 
-    fenetre.title("Parametres de configuration")
+    fenetre.title("Lexicon")
     fenetre.geometry("200x300")
     
-    #nom
-    f=font.Font(size=18)
-    bouton=Button(fenetre, text="NOM")
-    bouton["font"]=f
-    bouton.pack()
+    #choix nom
+    liste=Listbox(fenetre)
+    liste.insert(1, "Ball")
+    liste.insert(2, "Cube")
+    liste.pack()
 
-    #verbe
-    f=font.Font(size=18)
-    bouton=Button(fenetre, text="VERBE")
-    bouton["font"]=f
-    bouton.pack()
+    label=Label(fenetre, text="Please enter an obstacle : ")
+    label.pack()
+    nom_choisi=Entry(fenetre)
+    nom_choisi.pack()
 
-    #adjectif
-    f=font.Font(size=18)
-    bouton=Button(fenetre, text="ADJECTIF")
-    bouton["font"]=f
-    bouton.pack()
-    
+    #choix verbe
+    liste=Listbox(fenetre)
+    liste.insert(1, "Moves towards")
+    liste.insert(2, "Moves")
+    liste.insert(3, "Turns")
+    liste.pack()
 
+    label=Label(fenetre, text="Please enter an action : ")
+    label.pack()
+    action_choisie=Entry(fenetre)
+    action_choisie.pack()
 
     fenetre.mainloop()
     
