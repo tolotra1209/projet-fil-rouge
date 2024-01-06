@@ -2,9 +2,9 @@ from tkinter import *
 import tkinter
 import tkinter.font as font
 from tkinter import messagebox
-fenetre= Tk()
+fenetre = Tk()
 
-fenetre.title("Parametres de configuration")
+fenetre.title("Accueil")
 fenetre.geometry("300x200")
 
 #choix de Langue
@@ -16,80 +16,52 @@ liste.insert(4, "Espagnol")
 
 liste.pack()
 
-label=Label(fenetre, text="Veuillez entrer une langue: ")
+label=Label(fenetre, text="Veuillez saisir une langue: ")
 label.pack()
 entree=Entry(fenetre)
 entree.pack()
 
 #fonction couleur
-def afficher2():
-    fenetre= Tk()
+def anglais_couleur():
+    fenetre = Tk()
 
-    fenetre.title("Parametres de configuration")
+    fenetre.title("Colors")
     fenetre.geometry("200x300")
 
-    #menu
-    #Creer la barre de menu
-    menu_pfr = tkinter.Menu(fenetre)
-
-    #Creer menu en cascade
-    menu_aides = tkinter.Menu(menu_pfr, tearoff = 0)
-    menu_quitter = tkinter.Menu(menu_pfr, tearoff = 0)
-    menu_pfr.add_cascade(label = "Aides", menu = menu_aides)
-    menu_pfr.add_cascade(label = "Quitter", menu = menu_quitter)
-
-    #Mettre les éléments dans la cascade
-    menu_aides.add_command(label = "Manuel")
-    menu_quitter.add_command(label = "Quitter", command = exit)
-
-    #Emplacement du menu
-    fenetre.config(menu = menu_pfr)
-
+    #choix de la couleur
     liste=Listbox(fenetre)
-    liste.insert(1, "Rouge")
-    liste.insert(2, "Bleu")
-    liste.insert(3, "Vert")
+    liste.insert(1, "Red")
+    liste.insert(2, "Green")
+    liste.insert(3, "Blue")
     liste.pack()
+
+    label=Label(fenetre, text="Please enter a color: ")
+    label.pack()
+    entree=Entry(fenetre)
+    entree.pack()
 
     fenetre.mainloop()    
 
 #fonction lexique
-def afficher3():
+def anglais_lexique():
     fenetre= Tk()
 
     fenetre.title("Parametres de configuration")
     fenetre.geometry("200x300")
-
-    #menu
-    #Creer la barre de menu
-    menu_pfr = tkinter.Menu(fenetre)
-
-    #Creer menu en cascade
-    menu_aides = tkinter.Menu(menu_pfr, tearoff = 0)
-    menu_quitter = tkinter.Menu(menu_pfr, tearoff = 0)
-    menu_pfr.add_cascade(label = "Aides", menu = menu_aides)
-    menu_pfr.add_cascade(label = "Quitter", menu = menu_quitter)
-
-    #Mettre les éléments dans la cascade
-    menu_aides.add_command(label = "Manuel")
-    menu_quitter.add_command(label = "Quitter", command = exit)
-
-    #Emplacement du menu
-    fenetre.config(menu = menu_pfr)
-
-    #bouton nom
+    
+    #nom
     f=font.Font(size=18)
     bouton=Button(fenetre, text="NOM")
     bouton["font"]=f
     bouton.pack()
 
-    #bouton verbe
+    #verbe
     f=font.Font(size=18)
     bouton=Button(fenetre, text="VERBE")
     bouton["font"]=f
     bouton.pack()
 
-    #bouton adjectif
+    #adjectif
     f=font.Font(size=18)
     bouton=Button(fenetre, text="ADJECTIF")
     bouton["font"]=f
@@ -97,32 +69,32 @@ def afficher3():
     
 
 
-    fenetre.mainloop()    
-def entree1():
-    recup=entree.get()
+    fenetre.mainloop()
+    
+def recup_langue():
+    recup_langue=entree.get()
     #anglais
-    if recup == "Anglais":
+    if recup_langue == "Anglais":
         fenetre = Tk()
 
         fenetre.title("Anglais")
         fenetre.geometry("200x300")
         #bouton couleur
         f=font.Font(size=18)
-        bouton=Button(fenetre, text="COULEUR", command=afficher2,width=10,height=2)
+        bouton=Button(fenetre, text="COULEUR", command=anglais_couleur,width=10,height=2)
         bouton["font"]=f
         bouton.pack()
 
         #bouton lexique
         f=font.Font(size=18)
-        bouton=Button(fenetre, text="LEXIQUE", command=afficher3,width=10,height=2)
+        bouton=Button(fenetre, text="LEXIQUE", command=anglais_lexique,width=10,height=2)
         bouton["font"]=f
         bouton.pack()
-
-
+        
         fenetre.mainloop()
     
     #français
-    elif recup == "Français":
+    elif recup_langue == "Français":
         fenetre = Tk()
 
         fenetre.title("Français")
@@ -131,7 +103,7 @@ def entree1():
         fenetre.mainloop()
 
     #allemand
-    elif recup == "Allemand":
+    elif recup_langue == "Allemand":
         fenetre = Tk()
 
         fenetre.title("Allemand")
@@ -141,7 +113,7 @@ def entree1():
 
 
     #Espagnol
-    elif recup == "Espagnol":
+    elif recup_langue == "Espagnol":
         fenetre = Tk()
 
         fenetre.title("Espagnol")
