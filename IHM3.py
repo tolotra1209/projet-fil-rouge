@@ -138,7 +138,7 @@ def anglais_lexique():
 
 #Afficher la phrase complète
 
-print(action_phrase[0] "vers la/le" nom_phrase[0] couleur_phrase[0])
+print(action_phrase[0], "towards the", nom_phrase[0], couleur_phrase[0])
 
 #fonction couleur
 def francais_couleur():
