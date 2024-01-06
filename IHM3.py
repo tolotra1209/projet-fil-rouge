@@ -29,7 +29,7 @@ def anglais_couleur():
     fenetre.geometry("200x300")
 
     #choix de la couleur
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=3)
     liste.insert(1, "Red")
     liste.insert(2, "Green")
     liste.insert(3, "Blue")
@@ -39,6 +39,28 @@ def anglais_couleur():
     label.pack()
     couleur_choisie=Entry(fenetre)
     couleur_choisie.pack()
+
+    #création d'une liste/réinitialiser la liste
+    phrase=[]
+    def get_color():
+        get_color=couleur_choisie.get()
+        if get_color == "Red":
+            phrase.append(get_color)
+        elif get_color == "Green":
+            phrase.append(get_color)
+        elif get_color == "Blue":
+            phrase.append(get_color)
+        else:
+            messagebox.showerror("ERROR", "Invalid color")
+
+        print(phrase)
+        
+            
+
+    bouton=Button(fenetre, text="Validate",command=get_color)
+    bouton.pack()
+
+        
 
     fenetre.mainloop()    
 
@@ -50,7 +72,7 @@ def anglais_lexique():
     fenetre.geometry("200x300")
     
     #choix nom
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=2)
     liste.insert(1, "Ball")
     liste.insert(2, "Cube")
     liste.pack()
@@ -61,7 +83,7 @@ def anglais_lexique():
     nom_choisi.pack()
 
     #choix verbe
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=3)
     liste.insert(1, "Moves towards")
     liste.insert(2, "Moves")
     liste.insert(3, "Turns")
@@ -74,6 +96,7 @@ def anglais_lexique():
 
     fenetre.mainloop()
 
+
 #fonction couleur
 def francais_couleur():
     fenetre = Tk()
@@ -82,7 +105,7 @@ def francais_couleur():
     fenetre.geometry("200x300")
 
     #choix de la couleur
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=3)
     liste.insert(1, "Rouge")
     liste.insert(2, "Vert")
     liste.insert(3, "Bleu")
@@ -103,7 +126,7 @@ def francais_lexique():
     fenetre.geometry("200x300")
     
     #choix nom
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=2)
     liste.insert(1, "Balle")
     liste.insert(2, "Cube")
     liste.pack()
@@ -114,7 +137,7 @@ def francais_lexique():
     nom_choisi.pack()
 
     #choix verbe
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=3)
     liste.insert(1, "Avance vers")
     liste.insert(2, "Avance")
     liste.insert(3, "Tourne")
@@ -135,7 +158,7 @@ def allemand_couleur():
     fenetre.geometry("200x300")
 
     #choix de la couleur
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=3)
     liste.insert(1, "Rot")
     liste.insert(2, "Grün")
     liste.insert(3, "Blau")
@@ -156,18 +179,18 @@ def allemand_lexique():
     fenetre.geometry("200x300")
     
     #choix nom
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=2)
     liste.insert(1, "Ball")
     liste.insert(2, "Würfel")
     liste.pack()
 
-    label=Label(fenetre, text="Saisissez un obstacle : ")
+    label=Label(fenetre, text="Ein hindernis ergreifen : ")
     label.pack()
     nom_choisi=Entry(fenetre)
     nom_choisi.pack()
 
     #choix verbe
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=3)
     liste.insert(1, "Vorwärts nach")
     liste.insert(2, "Vorschuss")
     liste.insert(3, "Drehe")
@@ -188,7 +211,7 @@ def espagnol_couleur():
     fenetre.geometry("200x300")
 
     #choix de la couleur
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=3)
     liste.insert(1, "Rojo")
     liste.insert(2, "Verde")
     liste.insert(3, "Azul")
@@ -209,7 +232,7 @@ def espagnol_lexique():
     fenetre.geometry("200x300")
     
     #choix nom
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=2)
     liste.insert(1, "Bola")
     liste.insert(2, "Cubo")
     liste.pack()
@@ -220,7 +243,7 @@ def espagnol_lexique():
     nom_choisi.pack()
 
     #choix verbe
-    liste=Listbox(fenetre)
+    liste=Listbox(fenetre,height=3)
     liste.insert(1, "Avanzar a")
     liste.insert(2, "Avanzar")
     liste.insert(3, "Gire")
