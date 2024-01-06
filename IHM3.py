@@ -41,26 +41,25 @@ def anglais_couleur():
     couleur_choisie.pack()
 
     #création d'une liste/réinitialiser la liste
-    phrase=[]
+    couleur_phrase=[]
     def get_color():
         get_color=couleur_choisie.get()
         if get_color == "Red":
-            phrase.append(get_color)
+            couleur_phrase.clear()
+            couleur_phrase.append(get_color)
         elif get_color == "Green":
-            phrase.append(get_color)
+            couleur_phrase.clear()
+            couleur_phrase.append(get_color)
         elif get_color == "Blue":
-            phrase.append(get_color)
+            couleur_phrase.clear()
+            couleur_phrase.append(get_color)
         else:
             messagebox.showerror("ERROR", "Invalid color")
 
         print(phrase)
-        
-            
-
+    
     bouton=Button(fenetre, text="Validate",command=get_color)
     bouton.pack()
-
-        
 
     fenetre.mainloop()    
 
@@ -94,8 +93,52 @@ def anglais_lexique():
     action_choisie=Entry(fenetre)
     action_choisie.pack()
 
+#création d'une liste/réinitialiser la liste
+    nom_phrase=[]
+    def get_nom():
+        get_nom=nom_choisi.get()
+        if get_nom == "Ball":
+            nom_phrase.clear()
+            nom_phrase.append(get_nom)
+        elif get_nom == "Cube":
+            nom_phrase.clear()
+            nom_phrase.append(get_nom)
+        else:
+            messagebox.showerror("ERROR", "Invalid noun")
+
+        print(nom_phrase)   
+
+    bouton=Button(fenetre, text="Validate",command=get_nom)
+    bouton.pack()
+    
     fenetre.mainloop()
 
+#création d'une liste/réinitialiser la liste
+    action_phrase=[]
+    def get_action():
+        get_action=action_choisie.get()
+        if get_action == "Moves towards":
+            action_phrase.clear()
+            action_phrase.append(get_action)
+        elif get_action == "Moves":
+            action_phrase.clear()
+            action_phrase.append(get_action)
+        elif get_action == "Turns":
+            action_phrase.clear()
+            action_phrase.append(get_action)
+        else:
+            messagebox.showerror("ERROR", "Invalid noun")
+
+        print(action_phrase)   
+
+    bouton=Button(fenetre, text="Validate",command=get_action)
+    bouton.pack()
+    
+    fenetre.mainloop()
+
+#Afficher la phrase complète
+
+print(action_phrase[0] "vers la/le" nom_phrase[0] couleur_phrase[0])
 
 #fonction couleur
 def francais_couleur():
