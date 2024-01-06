@@ -73,7 +73,122 @@ def anglais_lexique():
     action_choisie.pack()
 
     fenetre.mainloop()
+
+
+
+#fonction couleur
+def francais_couleur():
+    fenetre = Tk()
+
+    fenetre.title("Couleurs")
+    fenetre.geometry("200x300")
+
+    #choix de la couleur
+    liste=Listbox(fenetre)
+    liste.insert(1, "Rouge")
+    liste.insert(2, "Vert")
+    liste.insert(3, "Bleu")
+    liste.pack()
+
+    label=Label(fenetre, text="Saisissez une couleur : ")
+    label.pack()
+    couleur_choisie=Entry(fenetre)
+    couleur_choisie.pack()
+
+    fenetre.mainloop()    
+
+#fonction lexique
+def francais_lexique():
+    fenetre = Tk()
+
+    fenetre.title("Lexique")
+    fenetre.geometry("200x300")
     
+    #choix nom
+    liste=Listbox(fenetre)
+    liste.insert(1, "Balle")
+    liste.insert(2, "Cube")
+    liste.pack()
+
+    label=Label(fenetre, text="Saisissez un obstacle : ")
+    label.pack()
+    nom_choisi=Entry(fenetre)
+    nom_choisi.pack()
+
+    #choix verbe
+    liste=Listbox(fenetre)
+    liste.insert(1, "Avance vers")
+    liste.insert(2, "Avance")
+    liste.insert(3, "Tourne")
+    liste.pack()
+
+    label=Label(fenetre, text="Saisissez une action : ")
+    label.pack()
+    action_choisie=Entry(fenetre)
+    action_choisie.pack()
+
+    fenetre.mainloop()
+
+
+
+
+#fonction couleur
+def allemand_couleur():
+    fenetre = Tk()
+
+    fenetre.title("Farben")
+    fenetre.geometry("200x300")
+
+    #choix de la couleur
+    liste=Listbox(fenetre)
+    liste.insert(1, "Rot")
+    liste.insert(2, "Grün")
+    liste.insert(3, "Blau")
+    liste.pack()
+
+    label=Label(fenetre, text="Geben Sie eine Farbe ein : ")
+    label.pack()
+    couleur_choisie=Entry(fenetre)
+    couleur_choisie.pack()
+
+    fenetre.mainloop()    
+
+#fonction lexique
+def allemand_lexique():
+    fenetre = Tk()
+
+    fenetre.title("Lexikon")
+    fenetre.geometry("200x300")
+    
+    #choix nom
+    liste=Listbox(fenetre)
+    liste.insert(1, "Ball")
+    liste.insert(2, "Würfel")
+    liste.pack()
+
+    label=Label(fenetre, text="Saisissez un obstacle : ")
+    label.pack()
+    nom_choisi=Entry(fenetre)
+    nom_choisi.pack()
+
+    #choix verbe
+    liste=Listbox(fenetre)
+    liste.insert(1, "Vorwärts nach")
+    liste.insert(2, "Vorschuss")
+    liste.insert(3, "Drehe")
+    liste.pack()
+
+    label=Label(fenetre, text="Geben Sie eine Aktion ein : ")
+    label.pack()
+    action_choisie=Entry(fenetre)
+    action_choisie.pack()
+
+    fenetre.mainloop()
+
+
+
+
+
 def recup_langue():
     recup_langue=langue_choisie.get()
     #anglais
@@ -84,13 +199,13 @@ def recup_langue():
         fenetre.geometry("200x300")
         #bouton couleur
         f=font.Font(size=18)
-        bouton=Button(fenetre, text="COULEUR", command=anglais_couleur,width=10,height=2)
+        bouton=Button(fenetre, text="COLORS", command=anglais_couleur,width=10,height=2)
         bouton["font"]=f
         bouton.pack()
 
         #bouton lexique
         f=font.Font(size=18)
-        bouton=Button(fenetre, text="LEXIQUE", command=anglais_lexique,width=10,height=2)
+        bouton=Button(fenetre, text="LEXICON", command=anglais_lexique,width=10,height=2)
         bouton["font"]=f
         bouton.pack()
         
