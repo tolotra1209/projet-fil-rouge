@@ -56,7 +56,7 @@ def anglais_couleur():
         else:
             messagebox.showerror("ERROR", "Invalid color")
 
-        print(phrase)
+        print(couleur_phrase)
     
     bouton=Button(fenetre, text="Validate",command=get_color)
     bouton.pack()
@@ -138,7 +138,7 @@ def anglais_lexique():
 
 #Afficher la phrase complète
 
-print(action_phrase[0], "towards the", nom_phrase[0], couleur_phrase[0])
+print(action_phrase[0], "towards the", couleur_phrase[0], nom_phrase[0])
 
 #fonction couleur
 def francais_couleur():
