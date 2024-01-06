@@ -261,7 +261,19 @@ def recup_langue():
 
         fenetre.title("Français")
         fenetre.geometry("200x300")
+        
+        #bouton couleur
+        f=font.Font(size=18)
+        bouton=Button(fenetre, text="COULEURS", command=francais_couleur,width=10,height=2)
+        bouton["font"]=f
+        bouton.pack()
 
+        #bouton lexique
+        f=font.Font(size=18)
+        bouton=Button(fenetre, text="LEXIQUE", command=francais_lexique,width=10,height=2)
+        bouton["font"]=f
+        bouton.pack()
+        
         fenetre.mainloop()
 
     #allemand
@@ -271,6 +283,18 @@ def recup_langue():
         fenetre.title("Allemand")
         fenetre.geometry("200x300")
 
+        #bouton couleur
+        f=font.Font(size=18)
+        bouton=Button(fenetre, text="FARBEN", command=allemand_couleur,width=10,height=2)
+        bouton["font"]=f
+        bouton.pack()
+
+        #bouton lexique
+        f=font.Font(size=18)
+        bouton=Button(fenetre, text="LEXIKON", command=allemand_lexique,width=10,height=2)
+        bouton["font"]=f
+        bouton.pack()
+        
         fenetre.mainloop()
 
 
@@ -281,6 +305,18 @@ def recup_langue():
         fenetre.title("Espagnol")
         fenetre.geometry("200x300")
 
+        #bouton couleur
+        f=font.Font(size=18)
+        bouton=Button(fenetre, text="COLORES", command=espagnol_couleur,width=10,height=2)
+        bouton["font"]=f
+        bouton.pack()
+
+        #bouton lexique
+        f=font.Font(size=18)
+        bouton=Button(fenetre, text="LEXICO", command=espagnol_lexique,width=10,height=2)
+        bouton["font"]=f
+        bouton.pack()
+        
         fenetre.mainloop()
 
     #ERROR
