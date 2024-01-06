@@ -74,8 +74,6 @@ def anglais_lexique():
 
     fenetre.mainloop()
 
-
-
 #fonction couleur
 def francais_couleur():
     fenetre = Tk()
@@ -128,9 +126,6 @@ def francais_lexique():
     action_choisie.pack()
 
     fenetre.mainloop()
-
-
-
 
 #fonction couleur
 def allemand_couleur():
@@ -185,9 +180,58 @@ def allemand_lexique():
 
     fenetre.mainloop()
 
+#fonction couleur
+def espagnol_couleur():
+    fenetre = Tk()
 
+    fenetre.title("Colores")
+    fenetre.geometry("200x300")
 
+    #choix de la couleur
+    liste=Listbox(fenetre)
+    liste.insert(1, "Rojo")
+    liste.insert(2, "Verde")
+    liste.insert(3, "Azul")
+    liste.pack()
 
+    label=Label(fenetre, text="Introduzca un color : ")
+    label.pack()
+    couleur_choisie=Entry(fenetre)
+    couleur_choisie.pack()
+
+    fenetre.mainloop()    
+
+#fonction lexique
+def espagnol_lexique():
+    fenetre = Tk()
+
+    fenetre.title("Léxico")
+    fenetre.geometry("200x300")
+    
+    #choix nom
+    liste=Listbox(fenetre)
+    liste.insert(1, "Bola")
+    liste.insert(2, "Cubo")
+    liste.pack()
+
+    label=Label(fenetre, text="Introduzca un obstáculo : ")
+    label.pack()
+    nom_choisi=Entry(fenetre)
+    nom_choisi.pack()
+
+    #choix verbe
+    liste=Listbox(fenetre)
+    liste.insert(1, "Avanzar a")
+    liste.insert(2, "Avanzar")
+    liste.insert(3, "Gire")
+    liste.pack()
+
+    label=Label(fenetre, text="Introducir una acción : ")
+    label.pack()
+    action_choisie=Entry(fenetre)
+    action_choisie.pack()
+
+    fenetre.mainloop()
 
 def recup_langue():
     recup_langue=langue_choisie.get()
