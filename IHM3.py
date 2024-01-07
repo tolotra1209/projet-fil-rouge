@@ -21,6 +21,10 @@ label.pack()
 langue_choisie=Entry(fenetre)
 langue_choisie.pack()
 
+
+
+#fonction lexique
+
 #fonction couleur
 def anglais_couleur():
     fenetre = Tk()
@@ -63,7 +67,6 @@ def anglais_couleur():
 
     fenetre.mainloop()    
 
-#fonction lexique
 def anglais_lexique():
     fenetre = Tk()
 
