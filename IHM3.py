@@ -19,126 +19,10 @@ liste.pack()
 label=Label(fenetre, text="Veuillez saisir une langue: ")
 label.pack()
 langue_choisie=Entry(fenetre)
-langue_choisie.pack()
-
-#fonction couleur
-def anglais_couleur():
-    fenetre = Tk()
-
-    fenetre.title("Colors")
-    fenetre.geometry("200x300")
-
-    #choix de la couleur
-    liste=Listbox(fenetre,height=3)
-    liste.insert(1, "Red")
-    liste.insert(2, "Green")
-    liste.insert(3, "Blue")
-    liste.pack()
-
-    label=Label(fenetre, text="Please enter a color: ")
-    label.pack()
-    couleur_choisie=Entry(fenetre)
-    couleur_choisie.pack()
-
-    #création d'une liste/réinitialiser la liste
-    couleur_phrase=[]
-    def get_color():
-        get_color=couleur_choisie.get()
-        if get_color == "Red":
-            couleur_phrase.clear()
-            couleur_phrase.append(get_color)
-        elif get_color == "Green":
-            couleur_phrase.clear()
-            couleur_phrase.append(get_color)
-        elif get_color == "Blue":
-            couleur_phrase.clear()
-            couleur_phrase.append(get_color)
-        else:
-            messagebox.showerror("ERROR", "Invalid color")
-
-        print(couleur_phrase)
-    
-    bouton=Button(fenetre, text="Validate",command=get_color)
-    bouton.pack()
-
-    fenetre.mainloop()    
-
-#fonction lexique
-def anglais_lexique():
-    fenetre = Tk()
-
-    fenetre.title("Lexicon")
-    fenetre.geometry("200x300")
-    
-    #choix nom
-    liste=Listbox(fenetre,height=2)
-    liste.insert(1, "Ball")
-    liste.insert(2, "Cube")
-    liste.pack()
-
-    label=Label(fenetre, text="Please enter an obstacle : ")
-    label.pack()
-    nom_choisi=Entry(fenetre)
-    nom_choisi.pack()
-
-    #choix verbe
-    liste=Listbox(fenetre,height=3)
-    liste.insert(1, "Moves towards")
-    liste.insert(2, "Moves")
-    liste.insert(3, "Turns")
-    liste.pack()
-
-    label=Label(fenetre, text="Please enter an action : ")
-    label.pack()
-    action_choisie=Entry(fenetre)
-    action_choisie.pack()
-
-#création d'une liste/réinitialiser la liste
-    nom_phrase=[]
-    def get_nom():
-        get_nom=nom_choisi.get()
-        if get_nom == "Ball":
-            nom_phrase.clear()
-            nom_phrase.append(get_nom)
-        elif get_nom == "Cube":
-            nom_phrase.clear()
-            nom_phrase.append(get_nom)
-        else:
-            messagebox.showerror("ERROR", "Invalid noun")
-
-        print(nom_phrase)   
-
-    bouton=Button(fenetre, text="Validate",command=get_nom)
-    bouton.pack()
-    
-    fenetre.mainloop()
-
-#création d'une liste/réinitialiser la liste
-    action_phrase=[]
-    def get_action():
-        get_action=action_choisie.get()
-        if get_action == "Moves towards":
-            action_phrase.clear()
-            action_phrase.append(get_action)
-        elif get_action == "Moves":
-            action_phrase.clear()
-            action_phrase.append(get_action)
-        elif get_action == "Turns":
-            action_phrase.clear()
-            action_phrase.append(get_action)
-        else:
-            messagebox.showerror("ERROR", "Invalid noun")
-
-        print(action_phrase)   
-
-    bouton=Button(fenetre, text="Validate",command=get_action)
-    bouton.pack()
-    
-    fenetre.mainloop()
+langue_choisie.pack()    
 
 #Afficher la phrase complète
 
-print(action_phrase[0], "towards the", couleur_phrase[0], nom_phrase[0])
 
 #fonction couleur
 def francais_couleur():
@@ -306,21 +190,114 @@ def recup_langue():
         fenetre = Tk()
 
         fenetre.title("Anglais")
-        fenetre.geometry("200x300")
-        #bouton couleur
-        f=font.Font(size=18)
-        bouton=Button(fenetre, text="COLORS", command=anglais_couleur,width=10,height=2)
-        bouton["font"]=f
+        fenetre.geometry("200x450")
+
+        #choix de la couleur
+        liste=Listbox(fenetre,height=3)
+        liste.insert(1, "Red")
+        liste.insert(2, "Green")
+        liste.insert(3, "Blue")
+        liste.pack()
+
+        label=Label(fenetre, text="Please enter a color: ")
+        label.pack()
+        couleur_choisie=Entry(fenetre)
+        couleur_choisie.pack()
+
+        #création d'une liste/réinitialiser la liste
+        couleur_phrase=[]
+        def get_color():
+            get_color=couleur_choisie.get()
+            if get_color == "Red":
+                couleur_phrase.clear()
+                couleur_phrase.append(get_color)
+            elif get_color == "Green":
+                couleur_phrase.clear()
+                couleur_phrase.append(get_color)
+            elif get_color == "Blue":
+                couleur_phrase.clear()
+                couleur_phrase.append(get_color)
+            else:
+                messagebox.showerror("ERROR", "Invalid color")
+            print(couleur_phrase)
+
+        bouton=Button(fenetre, text="Validate",command=get_color)
         bouton.pack()
 
-        #bouton lexique
-        f=font.Font(size=18)
-        bouton=Button(fenetre, text="LEXICON", command=anglais_lexique,width=10,height=2)
-        bouton["font"]=f
-        bouton.pack()
         
+        #choix nom
+        liste=Listbox(fenetre,height=2)
+        liste.insert(1, "Ball")
+        liste.insert(2, "Cube")
+        liste.pack()
+
+        label=Label(fenetre, text="Please enter an obstacle : ")
+        label.pack()
+        nom_choisi=Entry(fenetre)
+        nom_choisi.pack()
+
+        #création d'une liste/réinitialiser la liste
+        nom_phrase=[]
+        def get_nom():
+            get_nom=nom_choisi.get()
+            if get_nom == "Ball":
+                nom_phrase.clear()
+                nom_phrase.append(get_nom)
+            elif get_nom == "Cube":
+                nom_phrase.clear()
+                nom_phrase.append(get_nom)
+            else:
+                messagebox.showerror("ERROR", "Invalid noun")
+
+            print(nom_phrase)   
+
+        bouton=Button(fenetre, text="Validate",command=get_nom)
+        bouton.pack()
+
+        #choix verbe
+        liste=Listbox(fenetre,height=3)
+        liste.insert(1, "Moves towards")
+        liste.insert(2, "Moves")
+        liste.insert(3, "Turns")
+        liste.pack()
+
+        label=Label(fenetre, text="Please enter an action : ")
+        label.pack()
+        action_choisie=Entry(fenetre)
+        action_choisie.pack()
+
+    #création d'une liste/réinitialiser la liste
+        action_phrase=[]
+        def get_action():
+            get_action=action_choisie.get()
+            if get_action == "Moves towards":
+                action_phrase.clear()
+                action_phrase.append(get_action)
+            elif get_action == "Moves":
+                action_phrase.clear()
+                action_phrase.append(get_action)
+            elif get_action == "Turns":
+                action_phrase.clear()
+                action_phrase.append(get_action)
+            else:
+                messagebox.showerror("ERROR", "Invalid noun")
+
+            print(action_phrase)   
+
+        bouton=Button(fenetre, text="Validate",command=get_action)
+        bouton.pack()
+
+        label=Label(fenetre, text="Sentence")
+        label.pack()
+        def afficher_phrase():
+            label.config(text = action_phrase[0]+" towards the "+couleur_phrase[0]+" "+nom_phrase[0])
+            
+
+        bouton=Button(fenetre, text="Valid",command=afficher_phrase)
+        bouton.pack()
+            
         fenetre.mainloop()
-    
+        
     #français
     elif recup_langue == "Français":
         fenetre = Tk()
@@ -389,12 +366,7 @@ def recup_langue():
     else:
         messagebox.showerror("ERROR", "Invalid language")
         
-    
-
-
 bouton1=Button(fenetre, text="Valider", command=recup_langue)
 bouton1.pack()
-
-
 
 fenetre.mainloop()
