@@ -69,7 +69,7 @@ int main() {
 
         // Affichage des adjectifs
         printf("Adjectifs: ");
-        Lexique *lexiqueTemp = temp->adjectifs;
+        Lexique *lexiqueTemp = temp->adjectives;
         while (lexiqueTemp != NULL) {
             printf("%s ", lexiqueTemp->lexique);
             lexiqueTemp = lexiqueTemp->next;

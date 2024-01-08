@@ -4,21 +4,14 @@
 #include "Color.h"
 #include "Lexique.h"
 
-#define MAX_LANGUAGE_LENGTH 20
+#define MAX 100
 
-typedef struct LanguageCell {
-    char language[MAX_LANGUAGE_LENGTH];
-    Color *colors;
-    Lexique *nouns;
-    Lexique *verbs;
-    Lexique *adjectives;
-    struct LanguageCell *next;
-} LanguageCell;
-
-LanguageCell *createLanguageCell(const char *language);
-void freeLanguageList(LanguageCell *languageList);
-void inputLanguage(LanguageCell *languageCell);
-void inputColor(LanguageCell *languageCell);
-void inputLexiques(Lexique **lexiqueList, const char *lexiqueType);
+/*la cellule de langue*/
+typedef struct LangueCell{
+    char langue[MAX];
+    struct LangueCell *next;
+}LangueCell;
+void appendLangue(LangueCell** headRef, const char* newData);
+void displayLangue(LangueCell* head);
 
 #endif /* LANGUAGE_H */

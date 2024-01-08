@@ -5,7 +5,7 @@
 
 Color *createColor(const char *color) {
     Color *newColor = (Color *)malloc(sizeof(Color));
-    if (newNode != NULL) {
+    if (newColor != NULL) {
         strcpy(newColor->color, color);
         newColor->next = NULL;
     }

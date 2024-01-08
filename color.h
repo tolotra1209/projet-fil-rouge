@@ -1,12 +1,14 @@
 #ifndef COLOR_H
 #define COLOR_H
 
-typedef struct Color {
-    char color[20];
-    struct Color *next;
-} Color;
+#define MAX 100
 
-ColorNode *createColor(const char *color);
-void freeColorList(Color *colorList);
+typedef struct ColorCell {
+    char color[MAX];
+    struct ColorCell *next;
+} ColorCell;
+
+void appendColor(ColorCell** headRef2, const char* newData2);
+void displayColor(ColorCell* head2);
 
 #endif /* COLOR_H */

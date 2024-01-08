@@ -44,7 +44,7 @@ void inputColor(LanguageCell *languageCell) {
 
         Color *newColor = createColor(color);
         newColor->next = languageCell->colors;
-        languageCell->colors = newColorNode;
+        languageCell->colors = newColor;
     }
 }
 

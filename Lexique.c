@@ -5,7 +5,7 @@
 
 Lexique *createLexique(const char *lexique) {
     Lexique *newLexique = (Lexique *)malloc(sizeof(Lexique));
-    if (newNode != NULL) {
+    if (newLexique != NULL) {
         strcpy(newLexique->lexique, lexique);
         newLexique->next = NULL;
     }
