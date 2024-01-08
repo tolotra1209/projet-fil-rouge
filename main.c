@@ -33,6 +33,8 @@ int main() {
     printf("Contenu de la liste chainee de langue :\n");
     displayLangue(head);
 
+    printf("\n");
+
     /*liste chainéé pour couleur*/
     ColorCell* head2 = NULL; // Initialisation de la liste chaînée
 
@@ -58,6 +60,9 @@ int main() {
     // Afficher le contenu de la liste chaînée
     printf("Contenu de la liste chainee de couleur :\n");
     displayColor(head2);
+
+    printf("\n");
+    printf("Voici le lexique \n");
 
     /*liste chainéé pour nom*/
     NomCell* head3 = NULL; // Initialisation de la liste chaînée
@@ -85,6 +90,8 @@ int main() {
     printf("Contenu de la liste chainee de nom :\n");
     displayNom(head3);
 
+    printf("\n");
+
     /*liste chainéé pour verbe*/
     VerbeCell* head4 = NULL; // Initialisation de la liste chaînée
 
@@ -110,6 +117,8 @@ int main() {
     // Afficher le contenu de la liste chaînée
     printf("Contenu de la liste chainee de verbe :\n");
     displayVerbe(head4);
+
+    printf("\n");
 
     /*liste chainéé pour adjective*/
     AdjectiveCell* head5 = NULL; // Initialisation de la liste chaînée
