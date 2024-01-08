@@ -1,0 +1,7 @@
+file = open("fichier.txt","r")
+lignes = file.readlines()
+file.close()
+lignes[0]="phrase\n"
+file=open("fichier.txt","w")
+file.writelines(lignes)
+file.close()
