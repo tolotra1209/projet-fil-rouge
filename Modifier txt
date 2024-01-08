@@ -6,8 +6,8 @@ for i in range(1,4):    #si le fichier n'existe pas, il est créé, sinon son co
     fichier.write('ceci est la ligne {}\n'.format(i))
 fichier.close()
 
-#Modifier un txt
-file = open("fichier.txt","r")
+#Modifier un txt compris dans le même répertoire que le programme
+file = open("fichier.txt","r") #à vérifier si ça créer un fichier sans passer par le code au dessus
 lignes = file.readlines()
 file.close()
 lignes[0]="phrase\n"
