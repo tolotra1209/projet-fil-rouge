@@ -3,61 +3,40 @@
 #include <string.h>
 #include "Language.h"
 
-LanguageCell *createLanguageCell(const char *language) {
-    LanguageCell *new = (LanguageCell *)malloc(sizeof(LanguageCell));
-    if (new != NULL) {
-        strcpy(new->language, language);
-        new->colors = NULL;
-        new->nouns = NULL;
-        new->verbs = NULL;
-        new->adjectives = NULL;
-        new->next = NULL;
+// Fonction pour ajouter une chaîne à la liste chaînée langue
+void appendLangue(LangueCell** headRef, const char* newData) {
+    // Allouer de la mémoire pour le nouveau nœud
+    LangueCell* newLangueCell = (LangueCell*)malloc(sizeof(LangueCell));
+    
+    // Copier la nouvelle donnée dans le nœud
+    strncpy(newLangueCell->langue, newData, MAX);
+    newLangueCell->langue[MAX - 1] = '\0'; // Assurer que la chaîne est terminée par un caractère nul
+
+    // Initialiser le prochain nœud à NULL car il sera le dernier élément de la liste
+    newLangueCell->next = NULL;
+
+    // Si la liste est vide, le nouveau nœud devient la tête de la liste
+    if (*headRef == NULL) {
+        *headRef = newLangueCell;
+        return;
     }
-    return new;
-}
 
-void freeLanguageList(LanguageCell *languageList) {
-    while (languageList != NULL) {
-        LanguageCell *temp = languageList;
-        languageList = languageList->next;
-        freeColorList(temp->colors);
-        freeLexiqueList(temp->nouns);
-        freeLexiqueList(temp->verbs);
-        freeLexiqueList(temp->adjectives);
-        free(temp);
+    // Sinon, parcourir la liste pour atteindre le dernier nœud
+    LangueCell* lastLangueCell = *headRef;
+    while (lastLangueCell->next != NULL) {
+        lastLangueCell = lastLangueCell->next;
     }
+
+    // Ajouter le nouveau nœud à la fin de la liste
+    lastLangueCell->next = newLangueCell;
 }
 
-void inputLanguage(LanguageCell *languageCell) {
-    printf("Saisir une langue : ");
-    fgets(languageCell->language, sizeof(languageCell->language), stdin);
-    languageCell->language[strcspn(languageCell->language, "\n")] = '\0';
-}
+// Fonction pour afficher les éléments de la liste chaînée
+void displayLangue(LangueCell* head) {
+    LangueCell* current = head;
 
-void inputColor(LanguageCell *languageCell) {
-    printf("Saisir trois couleurs :\n");
-    for (int i = 0; i < 3; ++i) {
-        char color[20];
-        printf("Couleur %d : ", i + 1);
-        fgets(color, sizeof(color), stdin);
-        color[strcspn(color, "\n")] = '\0';
-
-        Color *newColor = createColor(color);
-        newColor->next = languageCell->colors;
-        languageCell->colors = newColor;
-    }
-}
-
-void inputLexiques(Lexique **lexiqueList, const char *lexiqueType) {
-    printf("Saisir trois lexiques %s :\n", lexiqueType);
-    for (int i = 0; i < 3; ++i) {
-        char lexique[20];
-        printf("%s %d : ", lexiqueType, i + 1);
-        fgets(lexique, sizeof(lexique), stdin);
-        lexique[strcspn(lexique, "\n")] = '\0';
-
-        Lexique *newLexique = createLexique(lexique);
-        newLexique->next = *lexiqueList;
-        *lexiqueList = newLexique;
+    while (current != NULL) {
+        printf("%s\n", current->langue);
+        current = current->next;
     }
 }

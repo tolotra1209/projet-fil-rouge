@@ -1,88 +1,142 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Language.h"
+#include "color.h"
+#include "Lexique.h"
 
 int main() {
-    // Création de la liste chaînée pour les langues
-    LanguageCell *head = NULL;
-    LanguageCell *current = NULL;
 
-    // Ajout de quelques données à la liste chaînée pour les langues
-    for (int i = 0; i < 3; ++i) {
-        LanguageCell *newLanguageCell = createLanguageCell("Langue");
+    /*liste chainée pour langue*/
+    LangueCell* head = NULL; // Initialisation de la liste chaînée
 
-        // Saisie de la langue
-        inputLanguage(newLanguageCell);
-
-        // Saisie des couleurs
-        inputColor(newLanguageCell);
-
-        // Saisie des noms
-        inputLexiques(&newLanguageCell->nouns, "noms");
-
-        // Saisie des verbes
-        inputLexiques(&newLanguageCell->verbs, "verbes");
-
-        // Saisie des adjectifs
-        inputLexiques(&newLanguageCell->adjectives, "adjectifs");
-
-        // Ajouter la nouvelle cellule à la liste principale pour les langues
-        if (head == NULL) {
-            head = current = newLanguageCell;
-        } else {
-            current->next = newLanguageCell;
-            current = newLanguageCell;
-        }
+    // Ouvrir le fichier texte.txt en mode lecture
+    FILE* fichier = fopen("langue.txt", "r");
+    if (fichier == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+        return EXIT_FAILURE;
     }
 
-    // Parcours et affichage des données de la liste chaînée pour les langues
-    LanguageCell *temp = head;
-    while (temp != NULL) {
-        printf("Langue: %s\n", temp->language);
+    char buffer[MAX];
 
-        // Affichage des couleurs
-        printf("Couleurs: ");
-        Color *colorTemp = temp->colors;
-        while (colorTemp != NULL) {
-            printf("%s ", colorTemp->color);
-            colorTemp = colorTemp->next;
-        }
-        printf("\n");
-
-        // Affichage des noms
-        printf("Noms: ");
-        Lexique *lexiqueTemp = temp->nouns;
-        while (lexiqueTemp != NULL) {
-            printf("%s ", lexiqueTemp->lexique);
-            lexiqueTemp = lexiqueTemp->next;
-        }
-        printf("\n");
-
-        // Affichage des verbes
-        printf("Verbes: ");
-        Lexique *lexiqueTemp = temp->verbs;
-        while (lexiqueTemp != NULL) {
-            printf("%s ", lexiqueTemp->lexique);
-            lexiqueTemp = lexiqueTemp->next;
-        }
-        printf("\n");
-
-        // Affichage des adjectifs
-        printf("Adjectifs: ");
-        Lexique *lexiqueTemp = temp->adjectives;
-        while (lexiqueTemp != NULL) {
-            printf("%s ", lexiqueTemp->lexique);
-            lexiqueTemp = lexiqueTemp->next;
-        }
-        printf("\n");
-
-        printf("\n");
-
-        temp = temp->next;
+    // Lecture du fichier ligne par ligne et ajout dans la liste chaînée
+    while (fgets(buffer, sizeof(buffer), fichier) != NULL) {
+        // Supprimer le saut de ligne à la fin de la chaîne
+        buffer[strcspn(buffer, "\n")] = '\0';
+        appendLangue(&head, buffer);
     }
 
-    // Libération de la mémoire allouée pour les langues
-    freeLanguageList(head);
+    // Fermer le fichier après la lecture
+    fclose(fichier);
+
+    // Afficher le contenu de la liste chaînée
+    printf("Contenu de la liste chainee de langue :\n");
+    displayLangue(head);
+
+    /*liste chainéé pour couleur*/
+    ColorCell* head2 = NULL; // Initialisation de la liste chaînée
+
+    // Ouvrir le fichier texte.txt en mode lecture
+    FILE* fichier2 = fopen("couleur.txt", "r");
+    if (fichier2 == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+        return EXIT_FAILURE;
+    }
+
+    char buffer2[MAX];
+
+    // Lecture du fichier ligne par ligne et ajout dans la liste chaînée
+    while (fgets(buffer2, sizeof(buffer2), fichier2) != NULL) {
+        // Supprimer le saut de ligne à la fin de la chaîne
+        buffer2[strcspn(buffer2, "\n")] = '\0';
+        appendColor(&head2, buffer2);
+    }
+
+    // Fermer le fichier après la lecture
+    fclose(fichier2);
+
+    // Afficher le contenu de la liste chaînée
+    printf("Contenu de la liste chainee de couleur :\n");
+    displayColor(head2);
+
+    /*liste chainéé pour nom*/
+    NomCell* head3 = NULL; // Initialisation de la liste chaînée
+
+    // Ouvrir le fichier texte.txt en mode lecture
+    FILE* fichier3 = fopen("nom.txt", "r");
+    if (fichier3 == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+        return EXIT_FAILURE;
+    }
+
+    char buffer3[MAX];
+
+    // Lecture du fichier ligne par ligne et ajout dans la liste chaînée
+    while (fgets(buffer3, sizeof(buffer3), fichier3) != NULL) {
+        // Supprimer le saut de ligne à la fin de la chaîne
+        buffer3[strcspn(buffer3, "\n")] = '\0';
+        appendNom(&head3, buffer3);
+    }
+
+    // Fermer le fichier après la lecture
+    fclose(fichier3);
+
+    // Afficher le contenu de la liste chaînée
+    printf("Contenu de la liste chainee de nom :\n");
+    displayNom(head3);
+
+    /*liste chainéé pour verbe*/
+    VerbeCell* head4 = NULL; // Initialisation de la liste chaînée
+
+    // Ouvrir le fichier texte.txt en mode lecture
+    FILE* fichier4 = fopen("verbe.txt", "r");
+    if (fichier4 == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+        return EXIT_FAILURE;
+    }
+
+    char buffer4[MAX];
+
+    // Lecture du fichier ligne par ligne et ajout dans la liste chaînée
+    while (fgets(buffer4, sizeof(buffer4), fichier4) != NULL) {
+        // Supprimer le saut de ligne à la fin de la chaîne
+        buffer4[strcspn(buffer4, "\n")] = '\0';
+        appendVerbe(&head4, buffer4);
+    }
+
+    // Fermer le fichier après la lecture
+    fclose(fichier4);
+
+    // Afficher le contenu de la liste chaînée
+    printf("Contenu de la liste chainee de verbe :\n");
+    displayVerbe(head4);
+
+    /*liste chainéé pour adjective*/
+    AdjectiveCell* head5 = NULL; // Initialisation de la liste chaînée
+
+    // Ouvrir le fichier texte.txt en mode lecture
+    FILE* fichier5 = fopen("adjective.txt", "r");
+    if (fichier5 == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+        return EXIT_FAILURE;
+    }
+
+    char buffer5[MAX];
+
+    // Lecture du fichier ligne par ligne et ajout dans la liste chaînée
+    while (fgets(buffer5, sizeof(buffer5), fichier5) != NULL) {
+        // Supprimer le saut de ligne à la fin de la chaîne
+        buffer5[strcspn(buffer5, "\n")] = '\0';
+        appendAdjective(&head5, buffer5);
+    }
+
+    // Fermer le fichier après la lecture
+    fclose(fichier5);
+
+    // Afficher le contenu de la liste chaînée
+    printf("Contenu de la liste chainee d'adjective :\n");
+    displayAdjective(head5);
 
     return 0;
 }
+
+
