@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Color.h"
+#include "color.h"
 
 // Fonction pour ajouter une chaîne à la liste chaînée couleur
 void appendColor(ColorCell** headRef2, const char* newData2) {

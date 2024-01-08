@@ -1,9 +1,6 @@
 #ifndef LANGUAGE_H
 #define LANGUAGE_H
 
-#include "Color.h"
-#include "Lexique.h"
-
 #define MAX 100
 
 /*la cellule de langue*/

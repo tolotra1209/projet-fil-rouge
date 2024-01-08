@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "Language.h"
 #include "color.h"
 #include "Lexique.h"
