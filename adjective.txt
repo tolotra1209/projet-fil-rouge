@@ -1,0 +1,5 @@
+bleu
+rouge
+vert
+petit
+grand
