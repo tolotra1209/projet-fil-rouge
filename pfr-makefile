@@ -1,0 +1,13 @@
+all: test_pfr.out
+
+test_pfr.out: test_pfr.o pfr.o
+	gcc -o test_pfr.out test_pfr.o pfr.o
+
+test_pfr.o: test_pfr.c pfr.h
+	gcc -c test_pfr.c
+
+pfr.o: pfr.c pfr.h
+	gcc -c pfr.c
+
+clean:
+	rm -f *.o
