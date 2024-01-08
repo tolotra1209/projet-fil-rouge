@@ -39,69 +39,76 @@ void contourner_obstacle(char cote) {
 
 int main() {
     char langue[20];
+    char continuer[5] = "oui";  // Initialisation avec "oui" pour entrer dans la boucle
+
     printf("Choose the language (francais or anglais) : ");
     scanf("%s", langue);
 
-    if (strcmp(langue, "francais") == 0) {
-        char instruction[20];
-        float valeur;
+    while (strcmp(continuer, "oui") == 0) {
+        if (strcmp(langue, "francais") == 0) {
+            char instruction[20];
+            float valeur;
 
-        printf("Entrez une instruction pour le robot (avance, tourne, avance_jusqu_a ou contourner_obstacle) : ");
-        scanf("%s", instruction);
+            printf("Entrez une instruction pour le robot (avance, tourne, avance_jusqu_a ou contourner_obstacle) : ");
+            scanf("%s", instruction);
 
-        if (strcmp(instruction, "avance") == 0 || strcmp(instruction, "avance_jusqu_a") == 0 || strcmp(instruction, "contourner_obstacle") == 0) {
-            printf("Entrez la distance : ");
-            scanf("%f", &valeur);
+            if (strcmp(instruction, "avance") == 0 || strcmp(instruction, "avance_jusqu_a") == 0 || strcmp(instruction, "contourner_obstacle") == 0) {
+                printf("Entrez la distance : ");
+                scanf("%f", &valeur);
+            } else {
+                printf("Entrez la valeur : ");
+                scanf("%f", &valeur);
+            }
+
+            if (strcmp(instruction, "avance") == 0) {
+                avance(valeur);
+            } else if (strcmp(instruction, "tourne") == 0) {
+                tourne(valeur);
+            } else if (strcmp(instruction, "avance_jusqu_a") == 0) {
+                avance_jusqu_a(valeur);
+            } else if (strcmp(instruction, "contourner_obstacle") == 0) {
+                char cote[20];
+                printf("Entrez le côté pour contourner l'obstacle (gauche ou droite) : ");
+                scanf("%s", cote);
+                contourner_obstacle(cote);
+            } else {
+                printf("Instruction invalide.\n");
+            }
+        } else if (strcmp(langue, "anglais") == 0) {
+            char instruction[20];
+            float valeur;
+
+            printf("Enter an instruction for the robot (move, turn, move_until, or avoid_obstacle) : ");
+            scanf("%s", instruction);
+
+            if (strcmp(instruction, "move") == 0 || strcmp(instruction, "move_until") == 0 || strcmp(instruction, "avoid_obstacle") == 0) {
+                printf("Enter the distance : ");
+                scanf("%f", &valeur);
+            } else {
+                printf("Enter the value : ");
+                scanf("%f", &valeur);
+            }
+
+            if (strcmp(instruction, "move") == 0) {
+                move(valeur);
+            } else if (strcmp(instruction, "turn") == 0) {
+                turn(valeur);
+            } else if (strcmp(instruction, "move_until") == 0) {
+                avance_jusqu_a(valeur);
+            } else if (strcmp(instruction, "avoid_obstacle") == 0) {
+                char side[20];
+                printf("Enter the side to avoid the obstacle (left or right) : ");
+                scanf("%s", side);
+                contourner_obstacle(side);
+            } else {
+                printf("Invalid instruction.\n");
+            }
         } else {
-            printf("Entrez la valeur : ");
-            scanf("%f", &valeur);
+            printf("Langue non prise en charge.\n");
         }
 
-        if (strcmp(instruction, "avance") == 0) {
-            avance(valeur);
-        } else if (strcmp(instruction, "tourne") == 0) {
-            tourne(valeur);
-        } else if (strcmp(instruction, "avance_jusqu_a") == 0) {
-            avance_jusqu_a(valeur);
-        } else if (strcmp(instruction, "contourner_obstacle") == 0) {
-            char cote[20];
-            printf("Entrez le côté pour contourner l'obstacle (gauche ou droite) : ");
-            scanf("%s", cote);
-            contourner_obstacle(cote);
-        } else {
-            printf("Instruction invalide.\n");
-        }
-    } else if (strcmp(langue, "anglais") == 0) {
-        char instruction[20];
-        float valeur;
-
-        printf("Enter an instruction for the robot (move, turn, move_until, or avoid_obstacle) : ");
-        scanf("%s", instruction);
-
-        if (strcmp(instruction, "move") == 0 || strcmp(instruction, "move_until") == 0 || strcmp(instruction, "avoid_obstacle") == 0) {
-            printf("Enter the distance : ");
-            scanf("%f", &valeur);
-        } else {
-            printf("Enter the value : ");
-            scanf("%f", &valeur);
-        }
-
-        if (strcmp(instruction, "move") == 0) {
-            move(valeur);
-        } else if (strcmp(instruction, "turn") == 0) {
-            turn(valeur);
-        } else if (strcmp(instruction, "move_until") == 0) {
-            avance_jusqu_a(valeur);
-        } else if (strcmp(instruction, "avoid_obstacle") == 0) {
-            char side[20];
-            printf("Enter the side to avoid the obstacle (left or right) : ");
-            scanf("%s", side);
-            contourner_obstacle(side);
-        } else {
-            printf("Invalid instruction.\n");
-        }
-    } else {
-        printf("Langue non prise en charge.\n");
+        printf("Voulez-vous continuer? (oui/non) : ");
+        scanf("%s", continuer);
     }
 
     return 0;
