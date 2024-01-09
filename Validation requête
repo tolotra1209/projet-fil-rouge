@@ -7,7 +7,9 @@
 int main() {
     FILE *fichier;
     char buffer[MAX_PHRASE_LENGTH];
-    char *phrases[] = {"Avance","Avance vers la Balle Rouge","Avance vers la Balle Verte","Avance vers la Balle Bleue","Avance vers le Carré Rouge","Avance vers le Carré Vert","Avance vers le Carré Bleu","Tourne"};
+    char *phrases[] = {"Avance","Avance vers la Balle Rouge","Avance vers la Balle Verte","Avance vers la Balle Bleue","Avance vers le Carré Rouge",
+"Avance vers le Carré Vert","Avance vers le Carré Bleu","Tourne","Advance","Advance to the Red Ball","Advance towards the Green Ball",
+"Advance to Blue Ball","Advance to the Red Square","Advance to Green Square","Advance to Blue Square","Turn"};
 
     fichier = fopen("fichier.txt", "r");
 
