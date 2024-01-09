@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <string.h>
+
+// Structures pour représenter les entitées et les données
+struct RequêteCommande {
+    char action[50]; //( Par exemple: "deplacer")
+};
+
+struct EtatPlateforme {
+    int positionX;
+    int positionY;
+   
+};
+
+struct Environnement {
+    // (Informations sur l'environnement)
+};
+
+struct Obstacle {
+    int positionX;
+    int positionY;
+};
+
+// Fonction pour vérifier si une commande est valide
+int VérifierCommande(RequêteCommande requête, EtatPlateforme état, Environnement env, Obstacle obstacles[]) {
+   // pour l'instant on considére toutes les commandes valides
+    return 1;
+}
+
+// Procédure pour exécuter une commande
+void ExécuterCommande(RequêteCommande requête, EtatPlateforme* état, Environnement env, Obstacle obstacles[]) {
+    if (strcmp(requête.action, "deplacer") == 0) {
+        // Implémentez la logique pour déplacer la plateforme
+        état->positionX += 1;
+        état->positionY += 1;
+        printf("Plateforme déplacée à la position (%d, %d)\n", état->positionX, état->positionY);
+    }
+    else if (strcmp(requête.action, "traiter_image") == 0) {
+        // Implémentez la logique pour traiter l'image
+        printf("Traitement de l'image...\n");
+    }
+   
+}
+
+int main() {
+    // Initialisation des variables pour la simulation
+    RequêteCommande requêtesCommandesValidées[100];
+    EtatPlateforme étatActuelPlateforme = { 0, 0 }; // Plateforme initialement à la position (0, 0)
+    Environnement infosEnvironnement;
+    Obstacle obstaclesDetectes[100];
+
+    // initialiser quelques requête-commande validé
+    strcpy(requêtesCommandesValidées[0].action, "deplacer");
+    strcpy(requêtesCommandesValidées[1].action, "traiter_image");
+
+    // Simulation d'exécution des commandes
+    for (int i = 0; i < 2; i++) { //  avec seulement 2 commandes
+        if (VérifierCommande(requêtesCommandesValidées[i], étatActuelPlateforme, infosEnvironnement, obstaclesDetectes)) {
+            ExécuterCommande(requêtesCommandesValidées[i], &étatActuelPlateforme, infosEnvironnement, obstaclesDetectes);
+        }
+    }
+
+    return 0;
+}
+//Note à voir (ajouter  plus de détails, intégrer des bibliothèques pour le traitement d'image, la détection d'obstacles, et implémenter la logique spécifique pour chaque fonctionnalité)
