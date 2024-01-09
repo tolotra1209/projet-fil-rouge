@@ -18,7 +18,8 @@ liste.pack()
 label=Label(fenetre, text="Please enter a language : ")
 label.pack()
 langue_choisie = Entry(fenetre)
-langue_choisie.pack()    
+langue_choisie.pack()
+    
 
 #choix de l'action suivant la langue choisie
 
@@ -118,7 +119,7 @@ def recup_langue():
     else:
         messagebox.showerror("ERROR", "Invalid language")
                     
-        bouton = Button(fenetre, text="Validate", command=recup_langue)
-        bouton.pack()
+bouton = Button(fenetre, text="Validate", command=recup_langue)
+bouton.pack()
 
-        fenetre.mainloop()
+fenetre.mainloop()

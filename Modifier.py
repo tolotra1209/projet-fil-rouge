@@ -7,10 +7,10 @@
 #fichier.close()
 
 #Modifier un txt compris dans le même répertoire que le programme
-file = open("/Users/tolot/Desktop/PFR/GIT/projet-fil-rouge/fichier.txt","r") #à vérifier si ça créer un fichier sans passer par le code au dessus
+file = open("fichier.txt","r") #à vérifier si ça créer un fichier sans passer par le code au dessus
 lignes = file.readlines()
 file.close()
 lignes[0]="phrase\n"
-file=open("/Users/tolot/Desktop/PFR/GIT/projet-fil-rouge/fichier.txt","w")
+file=open("fichier.txt","w")
 file.writelines(lignes)
 file.close()
