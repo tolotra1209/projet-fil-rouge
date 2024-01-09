@@ -1,5 +1,5 @@
-from tkinter import *
 import tkinter
+from tkinter import *
 from tkinter import messagebox
 
 fenetre = Tk()
@@ -56,6 +56,7 @@ def recup_langue():
         bouton.pack()
 
         def modif_txt():
+            label_modif.config(text="The sentence has been saved")
             file = open("fichier.txt","r") #le fichier doit déjà exister
             lignes = file.readlines()
             file.close()
@@ -100,6 +101,7 @@ def recup_langue():
         bouton.pack()
             
         def modif_txt():
+            label_modif.config(text="La phrase a été enregistrée")
             file = open("fichier.txt","r") #le fichier doit déjà exister
             lignes = file.readlines()
             file.close()
@@ -116,7 +118,7 @@ def recup_langue():
     else:
         messagebox.showerror("ERROR", "Invalid language")
                     
-        bouton = Button(fenetre, text="Valider", command=recup_langue)
+        bouton = Button(fenetre, text="Validate", command=recup_langue)
         bouton.pack()
 
         fenetre.mainloop()
