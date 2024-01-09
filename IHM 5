@@ -64,7 +64,7 @@ def recup_langue():
             file.writelines(lignes)
             file.close()
 
-        bouton = Button(fenetre, text="Validate",command=modif_txt)
+        bouton = Button(fenetre, text="Validate sentence",command=modif_txt)
         bouton.pack()
 
         fenetre.mainloop()
@@ -108,7 +108,7 @@ def recup_langue():
             file.writelines(lignes)
             file.close()
 
-        bouton = Button(fenetre, text="Valider",command=modif_txt)
+        bouton = Button(fenetre, text="Valider la phrase",command=modif_txt)
         bouton.pack()
 
         fenetre.mainloop()
