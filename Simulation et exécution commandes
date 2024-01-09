@@ -3,7 +3,7 @@
 
 // Structures pour représenter les entitées et les données
 struct RequêteCommande {
-    char action[50]; //( Par exemple: "deplacer")
+    char action[100]; //( Par exemple: "deplacer")
 };
 
 struct EtatPlateforme {
@@ -54,7 +54,7 @@ int main() {
     strcpy(requêtesCommandesValidées[1].action, "traiter_image");
 
     // Simulation d'exécution des commandes
-    for (int i = 0; i < 2; i++) { //  avec seulement 2 commandes
+    for (int i = 0; i < 2; i++) { // Ici avec seulement 2 commandes
         if (VérifierCommande(requêtesCommandesValidées[i], étatActuelPlateforme, infosEnvironnement, obstaclesDetectes)) {
             ExécuterCommande(requêtesCommandesValidées[i], &étatActuelPlateforme, infosEnvironnement, obstaclesDetectes);
         }
