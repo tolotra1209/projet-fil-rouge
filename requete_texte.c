@@ -72,7 +72,7 @@ int main()
     fclose(fichier);
 
     // Afficher le contenu de la liste chaînée
-    printf("Contenu de la liste chainee :\n");
+    printf("Contenu de la liste chainee de requete :\n");
     display(head);
 
     return 0;
