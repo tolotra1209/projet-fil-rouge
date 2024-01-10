@@ -7,7 +7,9 @@
 int main() {
     FILE *fichier;
     char buffer[MAX_PHRASE_LENGTH];
-    char *phrases[] = {"Phrase1", "Phrase2", "Phrase3"}; // Ajoutez les phrases de Thibault
+    char *phrases[] = {"Avance","Avance vers la Balle Rouge","Avance vers la Balle Verte","Avance vers la Balle Bleue","Avance vers le Carré Rouge",
+"Avance vers le Carré Vert","Avance vers le Carré Bleu","Tourne","Moves forward","Moves forward to the Red Ball","Moves forward to the Green Ball",
+"Moves forward to the Blue Ball","Moves forward to the Red Square","Moves forward to the Green Square","Moves forward to the Blue Square","Turn"};
 
     fichier = fopen("fichier.txt", "r");
 
