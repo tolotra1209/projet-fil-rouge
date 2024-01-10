@@ -37,7 +37,8 @@ def recup_langue():
 
         liste=Listbox(fenetre,height=3)
         liste.insert(1, "Moves forward")
-        liste.insert(2, "Moves forward to the (Color) (Obstacle)")
+        liste.insert(2, "Moves forward to the Color Obstacle")
+        liste.insert(3, "Turn")
         liste.pack()
 
         label=Label(fenetre, text="Please enter an action : ")
@@ -82,7 +83,8 @@ def recup_langue():
 
         liste=Listbox(fenetre,height=3)
         liste.insert(1, "Avance")
-        liste.insert(2, "Avance vers (le/la Obstacle) (Couleur)")
+        liste.insert(2, "Avance vers le/la Obstacle Couleur")
+        liste.insert(3, "Tourne")
         liste.pack()
 
         label=Label(fenetre, text="Saisissez une action : ")
