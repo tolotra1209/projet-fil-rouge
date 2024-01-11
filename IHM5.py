@@ -57,7 +57,7 @@ def recup_langue(langue):
             print(phrase)
 
         def modif_txt():
-            with open("C:/Users/tolot/Desktop/test/zoo.txt", "w") as filout:
+            with open("C:/Users/tolot/Desktop/PFR/GIT/projet-fil-rouge/fichier.txt", "w") as filout:
                 for i in phrase:
                     filout.write(f"{i}\n")
             label_modif.config(text="The sentence has been saved")
@@ -75,7 +75,7 @@ def recup_langue(langue):
         
     #Français
         
-    elif recup_langue == "Français":
+    elif langue == "Français":
         fenetre = Tk()
 
         fenetre.title("Français")
@@ -102,14 +102,12 @@ def recup_langue(langue):
             phrase.append(get_phrase)
             
         def modif_txt():
-            label_modif=Label(fenetre, text="Saisissez une action : ")
-            label_modif.pack()
-            label_modif.config(text="La phrase a été enregistrée")
-            with open("C:/Users/tolot/Desktop/test/zoo.txt", "w") as filout:
+            with open("C:/Users/tolot/Desktop/PFR/GIT/projet-fil-rouge/fichier.txt", "w") as filout:
                 for i in phrase:
                     filout.write(f"{i}\n")
+            label_modif.config(text="La phrase a été enregistrée")
 
-        label_modif=Label(fenetre, text="Waiting for validation")
+        label_modif=Label(fenetre, text="Attente de validation")
         label_modif.pack()
         def appel_text():
             return [get_phrase(),modif_txt()]
