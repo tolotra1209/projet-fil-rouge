@@ -38,6 +38,12 @@ ImageRGB chargerDonnees(const char *chemin) {
     imageInfo.matriceV = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
     imageInfo.matriceB = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
 
+    // Pour chaque hauteur, allouer de l'espace pour la largeur
+    for (int i = 0; i < imageInfo.hauteur; i++) {
+        imageInfo.matriceR[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
+        imageInfo.matriceV[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
+        imageInfo.matriceB[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
+
     if (!imageInfo.matriceR || !imageInfo.matriceV || !imageInfo.matriceB) {
         fprintf(stderr, "Erreur d'allocation mémoire pour les matrices.\n");
         exit(EXIT_FAILURE);
@@ -45,35 +51,30 @@ ImageRGB chargerDonnees(const char *chemin) {
         printf("Allocation mémoire réussie pour les matrices.\n");
     }
 
-    for (int i = 0; i < imageInfo.hauteur; i++) {
-        imageInfo.matriceR[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
-        imageInfo.matriceV[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
-        imageInfo.matriceB[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
-        for (int j = 0; j < imageInfo.largeur; j++) {
-            imageInfo.matriceR[i][j] = (int *)malloc(imageInfo.nombreMatrices * sizeof(int));
-            imageInfo.matriceV[i][j] = (int *)malloc(imageInfo.nombreMatrices * sizeof(int));
-            imageInfo.matriceB[i][j] = (int *)malloc(imageInfo.nombreMatrices * sizeof(int));
-
-            if (!imageInfo.matriceR[i][j] || !imageInfo.matriceV[i][j] || !imageInfo.matriceB[i][j]) {
-                fprintf(stderr, "Erreur d'allocation mémoire pour les éléments des matrices.\n");
-                exit(EXIT_FAILURE);
-            }
-        }
-    }
-
     // Utiliser une boucle pour le reste du fichier
     for (int k = 0; k < imageInfo.nombreMatrices; k++) {
         for (int i = 1; i < imageInfo.hauteur; i++) {
             for (int j = 0; j < imageInfo.largeur; j++) {
                 // Reste de votre code pour la lecture normale
-                if (fscanf(fichier, "%d %d %d", &imageInfo.matriceR[i][j][k], &imageInfo.matriceV[i][j][k], &imageInfo.matriceB[i][j][k]) != 3) {
-                    fprintf(stderr, "Erreur de lecture des valeurs pour la matrice %d à la position (%d, %d).\n", k, i, j);
-                    exit(EXIT_FAILURE);
+                if (k == 0) {
+                    if (fscanf(fichier, "%d", &imageInfo.matriceR[i][j][k]) != 1) {
+                        fprintf(stderr, "Erreur de lecture des valeurs pour la matriceR à la position (%d, %d).\n", i, j);
+                        exit(EXIT_FAILURE);
+                    }
+                } else if (k == 1) {
+                    if (fscanf(fichier, "%d", &imageInfo.matriceV[i][j][k]) != 1) {
+                        fprintf(stderr, "Erreur de lecture des valeurs pour la matriceV à la position (%d, %d).\n", i, j);
+                        exit(EXIT_FAILURE);
+                    }
+                } else if (k == 2) {
+                    if (fscanf(fichier, "%d", &imageInfo.matriceB[i][j][k]) != 1) {
+                        fprintf(stderr, "Erreur de lecture des valeurs pour la matriceB à la position (%d, %d).\n", i, j);
+                        exit(EXIT_FAILURE);
+                    }
                 }
             }
         }
     }
-
 
 
     fclose(fichier);
