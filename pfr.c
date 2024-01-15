@@ -16,7 +16,9 @@ typedef struct {
     int largeur;    // Largeur de l'image
     int hauteur;    // Hauteur de l'image
     int nombreMatrices; // Nombre de matrices (composantes rouge, verte, bleue)
-    int ***matrices; // Tableau dynamique pour stocker les matrices
+    int ***matriceR; // Matrice pour la composante rouge
+    int ***matriceV; // Matrice pour la composante verte
+    int ***matriceB; // Matrice pour la composante bleue
 } ImageRGB;
 
 // Fonction pour charger les données depuis un fichier texte
@@ -33,11 +35,18 @@ ImageRGB chargerDonnees(const char *chemin) {
     fscanf(fichier, "%d %d %d", &imageInfo.largeur, &imageInfo.hauteur, &imageInfo.nombreMatrices);
 
     // Allouer de l'espace pour les matrices
-    imageInfo.matrices = (int ***)malloc(imageInfo.nombreMatrices * sizeof(int **));
-    for (int i = 0; i < imageInfo.nombreMatrices; i++) {
-        imageInfo.matrices[i] = (int **)malloc(imageInfo.hauteur * sizeof(int *));
-        for (int j = 0; j < imageInfo.hauteur; j++) {
-            imageInfo.matrices[i][j] = (int *)malloc(imageInfo.largeur * sizeof(int));
+    imageInfo.matriceR = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
+    imageInfo.matriceV = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
+    imageInfo.matriceB = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
+
+    for (int i = 0; i < imageInfo.hauteur; i++) {
+        imageInfo.matriceR[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
+        imageInfo.matriceV[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
+        imageInfo.matriceB[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
+        for (int j = 0; j < imageInfo.largeur; j++) {
+            imageInfo.matriceR[i][j] = (int *)malloc(imageInfo.nombreMatrices * sizeof(int));
+            imageInfo.matriceV[i][j] = (int *)malloc(imageInfo.nombreMatrices * sizeof(int));
+            imageInfo.matriceB[i][j] = (int *)malloc(imageInfo.nombreMatrices * sizeof(int));
         }
     }
 
@@ -45,7 +54,7 @@ ImageRGB chargerDonnees(const char *chemin) {
     for (int k = 0; k < imageInfo.nombreMatrices; k++) {
         for (int i = 0; i < imageInfo.hauteur; i++) {
             for (int j = 0; j < imageInfo.largeur; j++) {
-                fscanf(fichier, "%d", &imageInfo.matrices[k][i][j]);
+                fscanf(fichier, "%d %d %d", &imageInfo.matriceR[i][j][k], &imageInfo.matriceV[i][j][k], &imageInfo.matriceB[i][j][k]);
             }
         }
     }
@@ -60,12 +69,12 @@ void detecterFormes(ImageRGB *imageInfo, Forme formes[], int *nombreFormes) {
     int largeur = imageInfo->largeur;
     int hauteur = imageInfo->hauteur;
 
-    // Convertir la composante rouge en niveaux de gris
+    // Convertir la composante rouge en niveaux de gris (exemple simple)
     int **image = (int **)malloc(hauteur * sizeof(int *));
     for (int i = 0; i < hauteur; i++) {
         image[i] = (int *)malloc(largeur * sizeof(int));
         for (int j = 0; j < largeur; j++) {
-            image[i][j] = imageInfo->matrices[0][i][j]; // Composante rouge
+            image[i][j] = imageInfo->matriceR[i][j][0]; // Composante rouge
         }
     }
 
@@ -103,8 +112,7 @@ void detecterFormes(ImageRGB *imageInfo, Forme formes[], int *nombreFormes) {
                 // Classer la forme en fonction de ses dimensions (par exemple, seuil pour déterminer carré ou rond)
                 if (nouvelleForme.largeur > 5 && nouvelleForme.hauteur > 5) {
                     nouvelleForme.type = 'C'; // 'C' pour carré
-                }
-                else {
+                } else {
                     nouvelleForme.type = 'R'; // 'R' pour rond
                 }
 
@@ -123,7 +131,7 @@ void detecterFormes(ImageRGB *imageInfo, Forme formes[], int *nombreFormes) {
 }
 
 int main() {
-    const char *cheminFichier = "C:/Users/tolot/Desktop/PFR/Image/bleu.txt";
+    const char *cheminFichier = "C:\\Users\\Nicolas\\Downloads\\13.txt";
 
     // Charger les données depuis le fichier texte
     ImageRGB imageInfo = chargerDonnees(cheminFichier);
@@ -138,20 +146,26 @@ int main() {
     // Afficher les résultats
     for (int i = 0; i < nombreFormes; i++) {
         printf("Forme %d:\n", i + 1);
-        printf("   Position : (%d, %d)\n", formes[i].x, formes[i].y);
-        printf("   Dimensions : %d x %d\n", formes[i].largeur, formes[i].hauteur);
-        printf("   Type : %c\n", formes[i].type);
+        printf("Position : (%d, %d)\n", formes[i].x, formes[i].y);
+        printf("Dimensions : %d x %d\n", formes[i].largeur, formes[i].hauteur);
+        printf("Type : %c\n", formes[i].type);
         printf("\n");
     }
 
     // Libérer l'espace mémoire alloué pour les matrices
-    for (int i = 0; i < imageInfo.nombreMatrices; i++) {
-        for (int j = 0; j < imageInfo.hauteur; j++) {
-            free(imageInfo.matrices[i][j]);
+    for (int i = 0; i < imageInfo.hauteur; i++) {
+        for (int j = 0; j < imageInfo.largeur; j++) {
+            free(imageInfo.matriceR[i][j]);
+            free(imageInfo.matriceV[i][j]);
+            free(imageInfo.matriceB[i][j]);
         }
-        free(imageInfo.matrices[i]);
+        free(imageInfo.matriceR[i]);
+        free(imageInfo.matriceV[i]);
+        free(imageInfo.matriceB[i]);
     }
-    free(imageInfo.matrices);
+    free(imageInfo.matriceR);
+    free(imageInfo.matriceV);
+    free(imageInfo.matriceB);
 
     return 0;
 }
