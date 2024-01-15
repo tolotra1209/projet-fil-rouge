@@ -27,6 +27,8 @@ ImageRGB chargerDonnees(const char *chemin) {
     if (!fichier) {
         fprintf(stderr, "Impossible d'ouvrir le fichier : %s\n", chemin);
         exit(EXIT_FAILURE);
+    } else {
+        printf("Fichier ouvert avec succès.\n");
     }
 
     ImageRGB imageInfo;
@@ -36,8 +38,28 @@ ImageRGB chargerDonnees(const char *chemin) {
 
     // Allouer de l'espace pour les matrices
     imageInfo.matriceR = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
+    if (!imageInfo.matriceR) {
+        fprintf(stderr, "Erreur d'allocation mémoire pour matriceR.\n");
+        exit(EXIT_FAILURE);
+    } else {
+        printf("Allocation mémoire réussie pour matriceR.\n");
+    }
+
     imageInfo.matriceV = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
+    if (!imageInfo.matriceV) {
+        fprintf(stderr, "Erreur d'allocation mémoire pour matriceV.\n");
+        exit(EXIT_FAILURE);
+    } else {
+        printf("Allocation mémoire réussie pour matriceV.\n");
+    }
+
     imageInfo.matriceB = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
+    if (!imageInfo.matriceB) {
+        fprintf(stderr, "Erreur d'allocation mémoire pour matriceB.\n");
+        exit(EXIT_FAILURE);
+    } else {
+        printf("Allocation mémoire réussie pour matriceB.\n");
+    }
 
     for (int i = 0; i < imageInfo.hauteur; i++) {
         imageInfo.matriceR[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
@@ -45,8 +67,22 @@ ImageRGB chargerDonnees(const char *chemin) {
         imageInfo.matriceB[i] = (int **)malloc(imageInfo.largeur * sizeof(int *));
         for (int j = 0; j < imageInfo.largeur; j++) {
             imageInfo.matriceR[i][j] = (int *)malloc(imageInfo.nombreMatrices * sizeof(int));
+            if (!imageInfo.matriceR[i][j]) {
+                fprintf(stderr, "Erreur d'allocation mémoire pour matriceR[%d][%d].\n", i, j);
+                exit(EXIT_FAILURE);
+            }
+
             imageInfo.matriceV[i][j] = (int *)malloc(imageInfo.nombreMatrices * sizeof(int));
+            if (!imageInfo.matriceV[i][j]) {
+                fprintf(stderr, "Erreur d'allocation mémoire pour matriceV[%d][%d].\n", i, j);
+                exit(EXIT_FAILURE);
+            }
+
             imageInfo.matriceB[i][j] = (int *)malloc(imageInfo.nombreMatrices * sizeof(int));
+            if (!imageInfo.matriceB[i][j]) {
+                fprintf(stderr, "Erreur d'allocation mémoire pour matriceB[%d][%d].\n", i, j);
+                exit(EXIT_FAILURE);
+            }
         }
     }
 
@@ -54,7 +90,10 @@ ImageRGB chargerDonnees(const char *chemin) {
     for (int k = 0; k < imageInfo.nombreMatrices; k++) {
         for (int i = 0; i < imageInfo.hauteur; i++) {
             for (int j = 0; j < imageInfo.largeur; j++) {
-                fscanf(fichier, "%d %d %d", &imageInfo.matriceR[i][j][k], &imageInfo.matriceV[i][j][k], &imageInfo.matriceB[i][j][k]);
+                if (fscanf(fichier, "%d %d %d", &imageInfo.matriceR[i][j][k], &imageInfo.matriceV[i][j][k], &imageInfo.matriceB[i][j][k]) != 3) {
+                    fprintf(stderr, "Erreur de lecture des valeurs pour la matrice %d à la position (%d, %d).\n", k, i, j);
+                    exit(EXIT_FAILURE);
+                }
             }
         }
     }
@@ -71,21 +110,25 @@ void detecterFormes(ImageRGB *imageInfo, Forme formes[], int *nombreFormes) {
 
     // Convertir la composante rouge en niveaux de gris (exemple simple)
     int **image = (int **)malloc(hauteur * sizeof(int *));
+    if (!image) {
+        fprintf(stderr, "Erreur d'allocation mémoire pour l'image.\n");
+        exit(EXIT_FAILURE);
+    } else {
+        printf("Allocation mémoire réussie pour l'image.\n");
+    }
+
     for (int i = 0; i < hauteur; i++) {
         image[i] = (int *)malloc(largeur * sizeof(int));
-        for (int j = 0; j < largeur; j++) {
-            image[i][j] = imageInfo->matriceR[i][j][0]; // Composante rouge
+        if (!image[i]) {
+            fprintf(stderr, "Erreur d'allocation mémoire pour l'image (ligne %d).\n", i);
+            exit(EXIT_FAILURE);
         }
     }
 
     // Exemple simple de seuillage : supposer que les valeurs supérieures à 128 sont des pixels "activés"
     for (int i = 0; i < hauteur; i++) {
         for (int j = 0; j < largeur; j++) {
-            if (image[i][j] > 128) {
-                image[i][j] = 1;
-            } else {
-                image[i][j] = 0;
-            }
+            image[i][j] = imageInfo->matriceR[i][j][0]; // Composante rouge
         }
     }
 
@@ -130,6 +173,7 @@ void detecterFormes(ImageRGB *imageInfo, Forme formes[], int *nombreFormes) {
     free(image);
 }
 
+// Fonction principale
 int main() {
     const char *cheminFichier = "C:\\Users\\Nicolas\\Downloads\\13.txt";
 
