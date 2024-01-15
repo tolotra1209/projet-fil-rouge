@@ -31,6 +31,8 @@ ImageRGB chargerDonnees(const char *chemin) {
     ImageRGB imageInfo;
 
     fscanf(fichier, "%d %d %d", &imageInfo.largeur, &imageInfo.hauteur, &imageInfo.nombreMatrices);
+    // Ajouter un printf pour afficher les valeurs lues
+    printf("Largeur: %d, Hauteur: %d, Nombre de matrices: %d\n", imageInfo.largeur, imageInfo.hauteur, imageInfo.nombreMatrices);
 
     imageInfo.matriceR = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
     imageInfo.matriceV = (int ***)malloc(imageInfo.hauteur * sizeof(int **));
@@ -59,19 +61,10 @@ ImageRGB chargerDonnees(const char *chemin) {
         }
     }
 
+    // Utiliser une boucle pour le reste du fichier
     for (int k = 0; k < imageInfo.nombreMatrices; k++) {
-        for (int i = 0; i < imageInfo.hauteur; i++) {
+        for (int i = 1; i < imageInfo.hauteur; i++) {
             for (int j = 0; j < imageInfo.largeur; j++) {
-                // Si c'est la première ligne, ignorez la lecture
-                if (i == 0 && j == 0 && k == 0) {
-                    int dummyR, dummyV, dummyB;
-                    if (fscanf(fichier, "%d %d %d", &dummyR, &dummyV, &dummyB) != 3) {
-                        fprintf(stderr, "Erreur de lecture des valeurs pour la matrice %d à la position (%d, %d).\n", k, i, j);
-                        exit(EXIT_FAILURE);
-                    }
-                    continue;
-                }
-
                 // Reste de votre code pour la lecture normale
                 if (fscanf(fichier, "%d %d %d", &imageInfo.matriceR[i][j][k], &imageInfo.matriceV[i][j][k], &imageInfo.matriceB[i][j][k]) != 3) {
                     fprintf(stderr, "Erreur de lecture des valeurs pour la matrice %d à la position (%d, %d).\n", k, i, j);
@@ -80,6 +73,7 @@ ImageRGB chargerDonnees(const char *chemin) {
             }
         }
     }
+
 
 
     fclose(fichier);
