@@ -96,7 +96,7 @@ void traiterImage(const char *cheminFichier) {
 }
 
 int main() {
-    const char *cheminFichier = "/home/nicolas/Documents/PFR_1/Image/IMG_300/IMG_5393.txt";
+    const char *cheminFichier = "C:/Users/tolot/Desktop/PFR/GIT/projet-fil-rouge";
 
     // Appelle la fonction pour traiter l'image
     traiterImage(cheminFichier);
