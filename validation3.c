@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main() {
-    FILE fichierEntree,fichierSortie;
+    FILE *fichierEntree,*fichierSortie;
     char ligne[100];
 
     // Ouvrir le fichier en lecture
