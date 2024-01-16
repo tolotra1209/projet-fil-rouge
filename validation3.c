@@ -30,12 +30,40 @@ int main() {
         }
 
         // Associer la ligne à une commande dans la boucle if
-        if (strncmp(ligne, "Moves Forward", 13) == 0) {
-            // Traitement pour la Commande1
+        if (strncmp(ligne, "Moves forward", 13) == 0) {
             fprintf(fichierSortie, "Go_forward(int_distance)\n");
         } else if (strncmp(ligne, "Turn", 4) == 0) {
-            // Traitement pour la Commande2
             fprintf(fichierSortie, "Turn(int_angle)\n");
+        } else if (strncmp(ligne, "Moves forward to the Red Ball", 29) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+         } else if (strncmp(ligne, "Moves forward to the Green Ball", 31) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Moves forward to the Blue Ball", 30) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+         } else if (strncmp(ligne, "Moves forward to the Red Square", 31) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Moves forward to the Green Square", 33) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Moves forward to the Blue Square", 32) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+
+        if (strncmp(ligne, "Avance", 6) == 0) {
+            fprintf(fichierSortie, "Go_forward(int_distance)\n");
+        } else if (strncmp(ligne, "Tourne", 6) == 0) {
+            fprintf(fichierSortie, "Turn(int_angle)\n");
+        } else if (strncmp(ligne, "Avance vers la Balle Rouge", 26) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+         } else if (strncmp(ligne, "Avance vers la Balle Verte", 26) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Avance vers la Balle Bleue", 26) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+         } else if (strncmp(ligne, "Avance vers le Carré Rouge", 26) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Avance vers le Carré Vert", 25) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Avance vers le Carré Bleu", 25) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+            
         } else {
             // Cas par défaut si la commande n'est pas reconnue
             fprintf(fichierSortie, "Commande non reconnue : %s", ligne);
