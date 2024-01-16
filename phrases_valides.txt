@@ -1,2 +1,2 @@
-Moves forward 
-Moves forward to the Red Ball 
+Moves Forward
+Turn

@@ -3,18 +3,18 @@
 #include <string.h>
 
 int main() {
-    FILE *fichierEntree, *fichierSortie;
+    FILE *fichierEntree,*fichierSortie;
     char ligne[100];
 
     // Ouvrir le fichier en lecture
-    fichierEntree = fopen("phrases_valides.txt", "r");
+    fichierEntree = fopen("C:/Users/tolot/Desktop/PFR/GIT/projet-fil-rouge/phrases_valides.txt", "r");
     if (fichierEntree == NULL) {
         perror("Erreur lors de l'ouverture du fichier en lecture");
         exit(EXIT_FAILURE);
     }
 
     // Ouvrir le fichier en écriture (le créer s'il n'existe pas)
-    fichierSortie = fopen("commandes.txt", "a");
+    fichierSortie = fopen("C:/Users/tolot/Desktop/PFR/GIT/projet-fil-rouge/commandes.txt", "a");
     if (fichierSortie == NULL) {
         perror("Erreur lors de l'ouverture ou de la création du fichier en écriture");
         fclose(fichierEntree);
@@ -23,11 +23,17 @@ int main() {
 
     // Lire chaque ligne du fichier d'entrée
     while (fgets(ligne, sizeof(ligne), fichierEntree) != NULL) {
+        // Supprimer le caractère de saut de ligne de la ligne lue
+        size_t longueur = strlen(ligne);
+        if (longueur > 0 && ligne[longueur - 1] == '\n') {
+            ligne[longueur - 1] = '\0'; // Remplace '\n' par '\0'
+        }
+
         // Associer la ligne à une commande dans la boucle if
-        if (strcmp(ligne, "Moves Forward") == 0) {
+        if (strncmp(ligne, "Moves Forward", 13) == 0) {
             // Traitement pour la Commande1
             fprintf(fichierSortie, "Go_forward(int_distance)\n");
-        } else if (strcmp(ligne, "Turn\n") == 0) {
+        } else if (strncmp(ligne, "Turn", 4) == 0) {
             // Traitement pour la Commande2
             fprintf(fichierSortie, "Turn(int_angle)\n");
         } else {
