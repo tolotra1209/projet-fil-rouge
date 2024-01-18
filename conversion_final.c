@@ -36,11 +36,19 @@ int main(){
             fprintf(fichierSortie, "Turn(int angle)\n");
         } else if (strncmp(ligne, "Moves forward to the Red Ball", 29) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Moves forward to the Orange Ball", 32) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Moves forward to the Yellow Ball", 32) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
         } else if (strncmp(ligne, "Moves forward to the Green Ball", 31) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
         } else if (strncmp(ligne, "Moves forward to the Blue Ball", 30) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
         } else if (strncmp(ligne, "Moves forward to the Red Square", 31) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Moves forward to the Orange Square", 34) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Moves forward to the Yellow Square", 34) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
         } else if (strncmp(ligne, "Moves forward to the Green Square", 33) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
@@ -54,15 +62,23 @@ int main(){
             fprintf(fichierSortie, "Turn(int angle)\n");
         } else if (strncmp(ligne, "Avance vers la Balle Rouge", 26) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Avance vers la Balle Orange", 27) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Avance vers la Balle Jaune", 26) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
         } else if (strncmp(ligne, "Avance vers la Balle Verte", 26) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
         } else if (strncmp(ligne, "Avance vers la Balle Bleue", 26) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
-        } else if (strncmp(ligne, "Avance vers le Carré Rouge", 26) == 0) {
+        } else if (strncmp(ligne, "Avance vers le Cube Rouge", 26) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
-        } else if (strncmp(ligne, "Avance vers le Carré Vert", 25) == 0) {
+        } else if (strncmp(ligne, "Avance vers le Cube Orange", 27) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
-        } else if (strncmp(ligne, "Avance vers le Carré Bleu", 25) == 0) {
+        } else if (strncmp(ligne, "Avance vers le Cube Jaune", 26) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Avance vers le Cube Vert", 25) == 0) {
+            fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
+        } else if (strncmp(ligne, "Avance vers le Cube Bleu", 25) == 0) {
             fprintf(fichierSortie, "Go_forward_obstacle(char obstacle)\n");
             
         } else {
