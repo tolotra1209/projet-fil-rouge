@@ -7,9 +7,11 @@
 int main() {
     FILE *fichierEntree, *fichierSortie;
     char buffer[MAX_PHRASE_LENGTH];
-    char *phrases[] = {"Avance","Avance vers la Balle Rouge","Avance vers la Balle Verte","Avance vers la Balle Bleue","Avance vers le Carré Rouge",
-        "Avance vers le Carré Vert","Avance vers le Carré Bleu","Tourne","Moves forward","Moves forward to the Red Ball","Moves forward to the Green Ball",
-        "Moves forward to the Blue Ball","Moves forward to the Red Square","Moves forward to the Green Square","Moves forward to the Blue Square","Turn"};
+    char *phrases[] = {"Avance","Avance vers la Balle Rouge","Avance vers la Balle Orange","Avance vers la Balle Jaune","Avance vers la Balle Verte",
+        "Avance vers la Balle Bleue","Avance vers le Cube Rouge","Avance vers le Cube Orange","Avance vers le Cube Jaune","Avance vers le Cube Vert",
+        "Avance vers le Cube Bleu","Tourne","Moves forward","Moves forward to the Red Ball","Moves forward to the Orange Ball","Moves forward to the Yellow Ball",
+        "Moves forward to the Green Ball","Moves forward to the Blue Ball","Moves forward to the Red Square","Moves forward to the Orange Square","Moves forward to the Yellow Square",
+        "Moves forward to the Green Square","Moves forward to the Blue Square","Turn"};
 
     fichierEntree = fopen("C:/Users/tolot/Desktop/PFR/GIT/projet-fil-rouge/fichier.txt", "r");
 
