@@ -23,7 +23,7 @@ void concatener_synonymes(char *mot, char *dictionnaire[], char *synonymes[], in
 
 int main() {
     // Définir les dictionnaires de verbes, d'obstacles et de couleurs
-    char *verbes[] = {"avance", "va", "progresse","tourne","pivoter"};
+    char *verbes[] = {"avance", "va", "progresse","tourne","pivote"};
     char *obstacles[] = {"balle", "boule", "cube", "carré"};
     char *couleurs[] = {"rouge", "vert", "verte", "bleu", "bleue", "jaune", "orange"};
 
