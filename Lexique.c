@@ -81,39 +81,39 @@ void displayVerbe(VerbeCell* head4) {
 }
 
 // Fonction pour ajouter une chaîne à la liste chaînée Adjective
-void appendAdjective(AdjectiveCell** headRef5, const char* newData5) {
+void appendSynonyme(SynonymeCell** headRef5, const char* newData5) {
     // Allouer de la mémoire pour le nouveau nœud
-    AdjectiveCell* newAdjectiveCell = (AdjectiveCell*)malloc(sizeof(AdjectiveCell));
+    SynonymeCell* newSynonymeCell = (SynonymeCell*)malloc(sizeof(SynonymeCell));
     
     // Copier la nouvelle donnée dans le nœud
-    strncpy(newAdjectiveCell->adjective, newData5, MAX);
-    newAdjectiveCell->adjective[MAX - 1] = '\0'; // Assurer que la chaîne est terminée par un caractère nul
+    strncpy(newSynonymeCell->synonyme, newData5, MAX);
+    newSynonymeCell->synonyme[MAX - 1] = '\0'; // Assurer que la chaîne est terminée par un caractère nul
 
     // Initialiser le prochain nœud à NULL car il sera le dernier élément de la liste
-    newAdjectiveCell->next = NULL;
+    newSynonymeCell->next = NULL;
 
     // Si la liste est vide, le nouveau nœud devient la tête de la liste
     if (*headRef5 == NULL) {
-        *headRef5 = newAdjectiveCell;
+        *headRef5 = newSynonymeCell;
         return;
     }
 
     // Sinon, parcourir la liste pour atteindre le dernier nœud
-    AdjectiveCell* lastAdjectiveCell = *headRef5;
-    while (lastAdjectiveCell->next != NULL) {
-        lastAdjectiveCell = lastAdjectiveCell->next;
+    SynonymeCell* lastSynonymeCell = *headRef5;
+    while (lastSynonymeCell->next != NULL) {
+        lastSynonymeCell = lastSynonymeCell->next;
     }
 
     // Ajouter le nouveau nœud à la fin de la liste
-    lastAdjectiveCell->next = newAdjectiveCell;
+    lastSynonymeCell->next = newSynonymeCell;
 }
 
 // Fonction pour afficher les éléments de la liste chaînée
-void displayAdjective(AdjectiveCell* head5) {
-    AdjectiveCell* current5 = head5;
+void displaySynonyme(SynonymeCell* head5) {
+    SynonymeCell* current5 = head5;
 
     while (current5 != NULL) {
-        printf("%s\n", current5->adjective);
+        printf("%s\n", current5->synonyme);
         current5 = current5->next;
     }
 }

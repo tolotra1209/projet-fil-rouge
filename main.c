@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "Language.h"
@@ -120,11 +120,11 @@ int main() {
 
     printf("\n");
 
-    /*liste chainéé pour adjective*/
-    AdjectiveCell* head5 = NULL; // Initialisation de la liste chaînée
+    /*liste chainéé pour synonyme*/
+    SynonymeCell* head5 = NULL; // Initialisation de la liste chaînée
 
     // Ouvrir le fichier texte.txt en mode lecture
-    FILE* fichier5 = fopen("adjective.txt", "r");
+    FILE* fichier5 = fopen("synonyme.txt", "r");
     if (fichier5 == NULL) {
         perror("Erreur lors de l'ouverture du fichier");
         return EXIT_FAILURE;
@@ -143,8 +143,8 @@ int main() {
     fclose(fichier5);
 
     // Afficher le contenu de la liste chaînée
-    printf("Contenu de la liste chainee d'adjective :\n");
-    displayAdjective(head5);
+    printf("Contenu de la liste chainee de synonyme :\n");
+    displaySynonyme(head5);
 
     return 0;
 }
