@@ -14,16 +14,16 @@ typedef struct VerbeCell {
     struct VerbeCell *next;
 } VerbeCell;
 
-typedef struct AdjectiveCell {
-    char adjective[MAX];
-    struct AdjectiveCell *next;
-} AdjectiveCell;
+typedef struct SynonymeCell {
+    char synonyme[MAX];
+    struct SynonymeCell *next;
+} SynonymeCell;
 
 void appendNom(NomCell** headRef3, const char* newData3);
 void displayNom(NomCell* head3);
 void appendVerbe(VerbeCell** headRef4, const char* newData4);
 void displayVerbe(VerbeCell* head4);
-void appendAdjective(AdjectiveCell** headRef5, const char* newData5);
-void displayAdjective(AdjectiveCell* head5);
+void appendAdjective(SynonymeCell** headRef5, const char* newData5);
+void displayAdjective(SynonymeCell* head5);
 
 #endif /* LEXIQUE_H */
