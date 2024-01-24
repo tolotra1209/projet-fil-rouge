@@ -136,7 +136,7 @@ int main() {
     while (fgets(buffer5, sizeof(buffer5), fichier5) != NULL) {
         // Supprimer le saut de ligne à la fin de la chaîne
         buffer5[strcspn(buffer5, "\n")] = '\0';
-        appendAdjective(&head5, buffer5);
+        appendSynonyme(&head5, buffer5);
     }
 
     // Fermer le fichier après la lecture
