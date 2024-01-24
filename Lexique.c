@@ -80,7 +80,7 @@ void displayVerbe(VerbeCell* head4) {
     }
 }
 
-// Fonction pour ajouter une chaîne à la liste chaînée Adjective
+// Fonction pour ajouter une chaîne à la liste chaînée Synonyme
 void appendSynonyme(SynonymeCell** headRef5, const char* newData5) {
     // Allouer de la mémoire pour le nouveau nœud
     SynonymeCell* newSynonymeCell = (SynonymeCell*)malloc(sizeof(SynonymeCell));
