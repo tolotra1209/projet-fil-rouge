@@ -23,7 +23,7 @@ void appendNom(NomCell** headRef3, const char* newData3);
 void displayNom(NomCell* head3);
 void appendVerbe(VerbeCell** headRef4, const char* newData4);
 void displayVerbe(VerbeCell* head4);
-void appendAdjective(SynonymeCell** headRef5, const char* newData5);
-void displayAdjective(SynonymeCell* head5);
+void appendSynonyme(SynonymeCell** headRef5, const char* newData5);
+void displaySynonyme(SynonymeCell* head5);
 
 #endif /* LEXIQUE_H */
