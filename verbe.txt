@@ -2,4 +2,4 @@ avance
 va
 progresse
 tourne
-pivoter
+pivote
