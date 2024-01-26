@@ -165,7 +165,7 @@ void analyser_phrases(char verbes[MAX_WORDS][MAX_WORD_LENGTH], int nbVerbes,
     }
 }
 void saisir_texte(char requete[MAX_WORDS], const char *nomFichier) {
-    printf("Entrez une requête : ");
+    printf("Saisissez une requête : ");
     fflush(stdout);
 
     if (fgets(requete, MAX_WORD_LENGTH, stdin) == NULL) {
