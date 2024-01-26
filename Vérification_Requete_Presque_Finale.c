@@ -116,7 +116,7 @@ int requete_correcte(char ligne[MAX_WORD_LENGTH], char verbes[MAX_WORDS][MAX_WOR
                 }
             } else if (position == 4) {
                 if (!couleur_present(mot, couleurs, nbCouleurs)) {
-                    return 0; // Requête incorrecte
+                    couleurPresent = 0; // Réinitialiser la présence de la couleur si elle n'est pas trouvée
                 } else {
                     couleurPresent = 1;
                 }
@@ -128,7 +128,7 @@ int requete_correcte(char ligne[MAX_WORD_LENGTH], char verbes[MAX_WORDS][MAX_WOR
     }
 
     // Vérifier si tous les champs requis sont présents
-    if ((position < 3 && !otherWordsPresent) || (position >= 3 && (verbePresent || (position >= 5 && nomPresent && couleurPresent)))) {
+    if ((position < 3 && !otherWordsPresent) || (position >= 3 && (verbePresent || (position >= 5 && nomPresent && !couleurPresent)))) {
         return 1; // Requête correcte
     } else {
         return 0; // Requête incorrecte
@@ -137,7 +137,7 @@ int requete_correcte(char ligne[MAX_WORD_LENGTH], char verbes[MAX_WORDS][MAX_WOR
 
 // Fonction pour écrire les requêtes valides dans le fichier requete_valide.txt
 void ecrire_requete_valide(const char *requete, const char *nomFichier) {
-    FILE *fichierRequete = fopen(nomFichier, "a"); // "a" pour append (ajout à la fin du fichier)
+    FILE *fichierRequete = fopen(nomFichier, "w");
     if (fichierRequete == NULL) {
         perror("Erreur lors de l'ouverture du fichier requete_valide.txt");
         exit(EXIT_FAILURE);
@@ -164,15 +164,12 @@ void analyser_phrases(char verbes[MAX_WORDS][MAX_WORD_LENGTH], int nbVerbes,
         printf("Requête invalide.\n");
     }
 }
-
-// Fonction pour saisir le texte depuis l'entrée standard et l'écrire dans le fichier requete_valide.txt
 void saisir_texte(char requete[MAX_WORDS], const char *nomFichier) {
-    printf("Entrez un texte : ");
-    fgets(requete, MAX_WORDS, stdin);
+    printf("Entrez une requête : ");
+    fflush(stdout);
 
-    // Supprimer le caractère de nouvelle ligne à la fin de la ligne
-    requete[strcspn(requete, "\n")] = '\0';
-
-    // Écrire la requête dans le fichier requete_valide.txt
-    ecrire_requete_valide(requete, nomFichier);
+    if (fgets(requete, MAX_WORD_LENGTH, stdin) == NULL) {
+        perror("Erreur lors de la saisie de la requête");
+        exit(EXIT_FAILURE);
+    }
 }
