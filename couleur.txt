@@ -1,4 +1,7 @@
 rouge
-bleu
 vert
+verte
+bleu
+bleue
 jaune
+orange

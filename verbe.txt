@@ -1,4 +1,5 @@
 avance
-recule
+va
+progresse
 tourne
-positionne
+pivote
