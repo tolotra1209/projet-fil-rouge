@@ -16,8 +16,9 @@ int requete_correcte(char ligne[MAX_WORD_LENGTH], char verbes[MAX_WORDS][MAX_WOR
 void analyser_phrases(char verbes[MAX_WORDS][MAX_WORD_LENGTH], int nbVerbes,
                       char noms[MAX_WORDS][MAX_WORD_LENGTH], int nbNoms,
                       char couleurs[MAX_WORDS][MAX_WORD_LENGTH], int nbCouleurs,
-                      const char *nomFichier);
+                      char requete[MAX_WORDS]);
 void ecrire_requete_valide(const char *requete, const char *nomFichier);
+void saisir_texte(char requete[MAX_WORDS], const char *nomFichier);
 
 int main() {
     char verbes[MAX_WORDS][MAX_WORD_LENGTH];
@@ -29,7 +30,10 @@ int main() {
     char couleurs[MAX_WORDS][MAX_WORD_LENGTH];
     int nbCouleurs = chargerMots(couleurs, "couleur.txt");
 
-    analyser_phrases(verbes, nbVerbes, noms, nbNoms, couleurs, nbCouleurs, "phrase.txt");
+    char requete[MAX_WORDS];
+    saisir_texte(requete, "requete_valide.txt");
+
+    analyser_phrases(verbes, nbVerbes, noms, nbNoms, couleurs, nbCouleurs, requete);
 
     return 0;
 }
@@ -144,27 +148,31 @@ void ecrire_requete_valide(const char *requete, const char *nomFichier) {
     fclose(fichierRequete);
 }
 
+
 // Analyse chaque ligne du fichier de phrases et écrit les requêtes valides dans le fichier requete_valide.txt
 void analyser_phrases(char verbes[MAX_WORDS][MAX_WORD_LENGTH], int nbVerbes,
                       char noms[MAX_WORDS][MAX_WORD_LENGTH], int nbNoms,
                       char couleurs[MAX_WORDS][MAX_WORD_LENGTH], int nbCouleurs,
-                      const char *nomFichier) {
-    FILE *fichierPhrase = fopen(nomFichier, "r");
-    if (fichierPhrase == NULL) {
-        perror("Erreur lors de l'ouverture du fichier de phrases");
-        exit(EXIT_FAILURE);
+                      char requete[MAX_WORDS]) {
+    // Supprimer le caractère de nouvelle ligne à la fin de la ligne
+    requete[strcspn(requete, "\n")] = '\0';
+
+    if (requete_correcte(requete, verbes, nbVerbes, noms, nbNoms, couleurs, nbCouleurs)) {
+        ecrire_requete_valide(requete, "requete_valide.txt");
+        printf("Requête valide.\n");
+    } else {
+        printf("Requête invalide.\n");
     }
+}
 
-    char ligne[MAX_WORD_LENGTH];
+// Fonction pour saisir le texte depuis l'entrée standard et l'écrire dans le fichier requete_valide.txt
+void saisir_texte(char requete[MAX_WORDS], const char *nomFichier) {
+    printf("Entrez un texte : ");
+    fgets(requete, MAX_WORDS, stdin);
 
-    while (fgets(ligne, MAX_WORD_LENGTH, fichierPhrase) != NULL) {
-        // Supprimer le caractère de nouvelle ligne à la fin de la ligne
-        ligne[strcspn(ligne, "\n")] = '\0';
+    // Supprimer le caractère de nouvelle ligne à la fin de la ligne
+    requete[strcspn(requete, "\n")] = '\0';
 
-        if (requete_correcte(ligne, verbes, nbVerbes, noms, nbNoms, couleurs, nbCouleurs)) {
-            ecrire_requete_valide(ligne, "requete_valide.txt");
-        }
-    }
-
-    fclose(fichierPhrase);
+    // Écrire la requête dans le fichier requete_valide.txt
+    ecrire_requete_valide(requete, nomFichier);
 }
