@@ -4,6 +4,9 @@
 #include "Language.h"
 #include "color.h"
 #include "Lexique.h"
+#include "choix_langue.h"
+#include "saisie_requete.h"
+
 
 int main() {
 
@@ -145,6 +148,17 @@ int main() {
     // Afficher le contenu de la liste chaînée
     printf("Contenu de la liste chainee de synonyme :\n");
     displaySynonyme(head5);
+    printf("\n");
+    
+    choisir_langue();
+    printf("%s", langue_choisie);
+    
+    printf("\n");
+    
+    saisir_texte();
+    printf("%s", requete);
+    
+    printf("\n");
 
     return 0;
 }
