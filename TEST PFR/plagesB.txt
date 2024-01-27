@@ -1,0 +1,178 @@
+Ligne 110, Colonnes 144 à 149
+Nombre de 'B' : 6, Nombre de 'N' : 1
+Ligne 111, Colonnes 137 à 155
+Nombre de 'B' : 19, Nombre de 'N' : 1
+Ligne 112, Colonnes 134 à 158
+Nombre de 'B' : 25, Nombre de 'N' : 1
+Ligne 113, Colonnes 131 à 161
+Nombre de 'B' : 31, Nombre de 'N' : 1
+Ligne 114, Colonnes 129 à 163
+Nombre de 'B' : 35, Nombre de 'N' : 1
+Ligne 115, Colonnes 127 à 164
+Nombre de 'B' : 38, Nombre de 'N' : 1
+Ligne 116, Colonnes 125 à 166
+Nombre de 'B' : 42, Nombre de 'N' : 1
+Ligne 117, Colonnes 124 à 167
+Nombre de 'B' : 44, Nombre de 'N' : 1
+Ligne 118, Colonnes 122 à 169
+Nombre de 'B' : 48, Nombre de 'N' : 1
+Ligne 119, Colonnes 121 à 170
+Nombre de 'B' : 50, Nombre de 'N' : 1
+Ligne 120, Colonnes 120 à 172
+Nombre de 'B' : 53, Nombre de 'N' : 1
+Ligne 121, Colonnes 119 à 173
+Nombre de 'B' : 55, Nombre de 'N' : 1
+Ligne 122, Colonnes 118 à 173
+Nombre de 'B' : 56, Nombre de 'N' : 1
+Ligne 123, Colonnes 117 à 174
+Nombre de 'B' : 58, Nombre de 'N' : 1
+Ligne 124, Colonnes 115 à 175
+Nombre de 'B' : 61, Nombre de 'N' : 1
+Ligne 125, Colonnes 116 à 176
+Nombre de 'B' : 61, Nombre de 'N' : 1
+Ligne 126, Colonnes 115 à 177
+Nombre de 'B' : 63, Nombre de 'N' : 1
+Ligne 127, Colonnes 115 à 177
+Nombre de 'B' : 63, Nombre de 'N' : 1
+Ligne 128, Colonnes 114 à 178
+Nombre de 'B' : 65, Nombre de 'N' : 1
+Ligne 129, Colonnes 113 à 179
+Nombre de 'B' : 67, Nombre de 'N' : 1
+Ligne 130, Colonnes 112 à 179
+Nombre de 'B' : 68, Nombre de 'N' : 1
+Ligne 131, Colonnes 112 à 180
+Nombre de 'B' : 69, Nombre de 'N' : 1
+Ligne 132, Colonnes 111 à 180
+Nombre de 'B' : 70, Nombre de 'N' : 1
+Ligne 133, Colonnes 111 à 181
+Nombre de 'B' : 71, Nombre de 'N' : 1
+Ligne 134, Colonnes 110 à 181
+Nombre de 'B' : 72, Nombre de 'N' : 1
+Ligne 135, Colonnes 110 à 181
+Nombre de 'B' : 72, Nombre de 'N' : 1
+Ligne 136, Colonnes 110 à 182
+Nombre de 'B' : 73, Nombre de 'N' : 1
+Ligne 137, Colonnes 109 à 182
+Nombre de 'B' : 74, Nombre de 'N' : 1
+Ligne 138, Colonnes 149 à 182
+Nombre de 'B' : 71, Nombre de 'N' : 2
+Ligne 139, Colonnes 109 à 183
+Nombre de 'B' : 75, Nombre de 'N' : 1
+Ligne 140, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 141, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 142, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 143, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 144, Colonnes 108 à 184
+Nombre de 'B' : 77, Nombre de 'N' : 1
+Ligne 145, Colonnes 108 à 184
+Nombre de 'B' : 77, Nombre de 'N' : 1
+Ligne 146, Colonnes 108 à 184
+Nombre de 'B' : 77, Nombre de 'N' : 1
+Ligne 147, Colonnes 108 à 184
+Nombre de 'B' : 77, Nombre de 'N' : 1
+Ligne 148, Colonnes 107 à 184
+Nombre de 'B' : 78, Nombre de 'N' : 1
+Ligne 149, Colonnes 107 à 184
+Nombre de 'B' : 78, Nombre de 'N' : 1
+Ligne 150, Colonnes 107 à 184
+Nombre de 'B' : 78, Nombre de 'N' : 1
+Ligne 151, Colonnes 108 à 184
+Nombre de 'B' : 77, Nombre de 'N' : 1
+Ligne 152, Colonnes 108 à 184
+Nombre de 'B' : 77, Nombre de 'N' : 1
+Ligne 153, Colonnes 108 à 184
+Nombre de 'B' : 77, Nombre de 'N' : 1
+Ligne 154, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 155, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 156, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 157, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 158, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 159, Colonnes 108 à 183
+Nombre de 'B' : 76, Nombre de 'N' : 1
+Ligne 160, Colonnes 109 à 182
+Nombre de 'B' : 74, Nombre de 'N' : 1
+Ligne 161, Colonnes 109 à 182
+Nombre de 'B' : 74, Nombre de 'N' : 1
+Ligne 162, Colonnes 109 à 182
+Nombre de 'B' : 74, Nombre de 'N' : 1
+Ligne 163, Colonnes 109 à 181
+Nombre de 'B' : 73, Nombre de 'N' : 1
+Ligne 164, Colonnes 110 à 181
+Nombre de 'B' : 72, Nombre de 'N' : 1
+Ligne 165, Colonnes 110 à 180
+Nombre de 'B' : 71, Nombre de 'N' : 1
+Ligne 166, Colonnes 110 à 180
+Nombre de 'B' : 71, Nombre de 'N' : 1
+Ligne 167, Colonnes 110 à 179
+Nombre de 'B' : 70, Nombre de 'N' : 1
+Ligne 168, Colonnes 110 à 179
+Nombre de 'B' : 70, Nombre de 'N' : 1
+Ligne 169, Colonnes 111 à 178
+Nombre de 'B' : 68, Nombre de 'N' : 1
+Ligne 170, Colonnes 111 à 178
+Nombre de 'B' : 68, Nombre de 'N' : 1
+Ligne 171, Colonnes 111 à 177
+Nombre de 'B' : 67, Nombre de 'N' : 1
+Ligne 172, Colonnes 112 à 177
+Nombre de 'B' : 66, Nombre de 'N' : 1
+Ligne 173, Colonnes 112 à 177
+Nombre de 'B' : 66, Nombre de 'N' : 1
+Ligne 174, Colonnes 113 à 176
+Nombre de 'B' : 64, Nombre de 'N' : 1
+Ligne 175, Colonnes 113 à 176
+Nombre de 'B' : 65, Nombre de 'N' : 2
+Ligne 176, Colonnes 112 à 175
+Nombre de 'B' : 64, Nombre de 'N' : 1
+Ligne 177, Colonnes 112 à 175
+Nombre de 'B' : 64, Nombre de 'N' : 1
+Ligne 178, Colonnes 113 à 174
+Nombre de 'B' : 62, Nombre de 'N' : 1
+Ligne 179, Colonnes 175 à 175
+Nombre de 'B' : 61, Nombre de 'N' : 3
+Ligne 180, Colonnes 174 à 174
+Nombre de 'B' : 58, Nombre de 'N' : 4
+Ligne 181, Colonnes 174 à 174
+Nombre de 'B' : 58, Nombre de 'N' : 3
+Ligne 182, Colonnes 172 à 173
+Nombre de 'B' : 55, Nombre de 'N' : 3
+Ligne 183, Colonnes 124 à 172
+Nombre de 'B' : 54, Nombre de 'N' : 2
+Ligne 184, Colonnes 171 à 172
+Nombre de 'B' : 47, Nombre de 'N' : 5
+Ligne 185, Colonnes 130 à 171
+Nombre de 'B' : 46, Nombre de 'N' : 2
+Ligne 186, Colonnes 131 à 170
+Nombre de 'B' : 43, Nombre de 'N' : 2
+Ligne 187, Colonnes 160 à 169
+Nombre de 'B' : 41, Nombre de 'N' : 4
+Ligne 188, Colonnes 138 à 169
+Nombre de 'B' : 43, Nombre de 'N' : 4
+Ligne 189, Colonnes 143 à 167
+Nombre de 'B' : 40, Nombre de 'N' : 2
+Ligne 190, Colonnes 144 à 166
+Nombre de 'B' : 34, Nombre de 'N' : 3
+Ligne 191, Colonnes 143 à 164
+Nombre de 'B' : 34, Nombre de 'N' : 2
+Ligne 192, Colonnes 145 à 163
+Nombre de 'B' : 35, Nombre de 'N' : 4
+Ligne 193, Colonnes 141 à 161
+Nombre de 'B' : 33, Nombre de 'N' : 2
+Ligne 194, Colonnes 139 à 158
+Nombre de 'B' : 29, Nombre de 'N' : 2
+Ligne 195, Colonnes 130 à 157
+Nombre de 'B' : 28, Nombre de 'N' : 1
+Ligne 196, Colonnes 152 à 154
+Nombre de 'B' : 21, Nombre de 'N' : 2
+Ligne 197, Colonnes 136 à 149
+Nombre de 'B' : 14, Nombre de 'N' : 1
+Ligne 198, Colonnes 141 à 142
+Nombre de 'B' : 2, Nombre de 'N' : 1
