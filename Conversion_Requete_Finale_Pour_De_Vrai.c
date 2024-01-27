@@ -60,17 +60,19 @@ int main() {
         }
 
         if (estPresentDansFichier(mot, "synonyme_avance.txt")) {
-            fprintf(fichierCommande, "Go_forward()\n");
+            fprintf(fichierCommande, "Go_forward()");
         } else if (estPresentDansFichier(mot, "synonyme_tourne.txt")) {
-            fprintf(fichierCommande, "Turn()\n");
+            fprintf(fichierCommande, "Turn()");
         }
+
+        fprintf(fichierCommande, "\n"); // Ajouter toujours un saut de ligne
 
         fclose(fichierCommande);
     }
 
     fclose(fichierRequete);
 
-    printf("La commande a été enregistrée.\n");
+    printf("Les commandes ont été enregistrées.\n");
 
     return 0;
 }
