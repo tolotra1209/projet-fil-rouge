@@ -1,7 +1,7 @@
-main.out: main.o Language.o color.o Lexique.o saisie_requete.o choix_langue.o
-	gcc -o main.out main.o Language.o color.o Lexique.o saisie_requete.o choix_langue.o
+main.out: main.o Language.o color.o Lexique.o requete_texte.o choix_langue.o conversion_requete.o execution.o
+	gcc -o main.out main.o Language.o color.o Lexique.o requete_texte.o choix_langue.o conversion_requete.o execution.o
 
-main.o: main.c Language.h color.h Lexique.h saisie_requete.h
+main.o: main.c Language.h color.h Lexique.h requete_texte.h choix_langue.h conversion_requete.h
 	gcc -c main.c
 
 Language.o: Language.c Language.h
@@ -13,12 +13,17 @@ Lexique.o: Lexique.c Lexique.h
 color.o: color.c color.h
 	gcc -c color.c
 
-saisie_requete.o: saisie_requete.c saisie_requete.h
-	gcc -c saisie_requete.c
+requete_texte.o: requete_texte.c requete_texte.h
+	gcc -c requete_texte.c
 	
 choix_langue.o: choix_langue.c choix_langue.h
 	gcc -c choix_langue.c
 
+conversion_requete.o: conversion_requete.c conversion_requete.h
+	gcc -c conversion_requete.c
+	
+execution.o: execution.c execution.h
+	gcc -c execution.c
 
 clean:
 	rm -f *.o main.out
