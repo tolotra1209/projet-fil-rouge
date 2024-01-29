@@ -1,0 +1,274 @@
+Ligne 46, Colonnes 23 à 23
+Nombre de 'R' : 1, Nombre de 'N' : 1
+Ligne 86, Colonnes 144 à 155
+Nombre de 'R' : 15, Nombre de 'N' : 2
+Ligne 87, Colonnes 137 à 160
+Nombre de 'R' : 24, Nombre de 'N' : 1
+Ligne 88, Colonnes 133 à 165
+Nombre de 'R' : 33, Nombre de 'N' : 1
+Ligne 89, Colonnes 131 à 167
+Nombre de 'R' : 37, Nombre de 'N' : 1
+Ligne 90, Colonnes 127 à 170
+Nombre de 'R' : 44, Nombre de 'N' : 1
+Ligne 91, Colonnes 125 à 171
+Nombre de 'R' : 47, Nombre de 'N' : 1
+Ligne 92, Colonnes 123 à 175
+Nombre de 'R' : 53, Nombre de 'N' : 1
+Ligne 93, Colonnes 122 à 176
+Nombre de 'R' : 55, Nombre de 'N' : 1
+Ligne 94, Colonnes 119 à 178
+Nombre de 'R' : 60, Nombre de 'N' : 1
+Ligne 95, Colonnes 118 à 179
+Nombre de 'R' : 62, Nombre de 'N' : 1
+Ligne 96, Colonnes 117 à 181
+Nombre de 'R' : 65, Nombre de 'N' : 1
+Ligne 97, Colonnes 116 à 182
+Nombre de 'R' : 67, Nombre de 'N' : 1
+Ligne 98, Colonnes 113 à 183
+Nombre de 'R' : 71, Nombre de 'N' : 1
+Ligne 99, Colonnes 113 à 184
+Nombre de 'R' : 72, Nombre de 'N' : 1
+Ligne 100, Colonnes 110 à 186
+Nombre de 'R' : 77, Nombre de 'N' : 1
+Ligne 101, Colonnes 110 à 187
+Nombre de 'R' : 78, Nombre de 'N' : 1
+Ligne 102, Colonnes 109 à 188
+Nombre de 'R' : 80, Nombre de 'N' : 1
+Ligne 103, Colonnes 108 à 189
+Nombre de 'R' : 82, Nombre de 'N' : 1
+Ligne 104, Colonnes 107 à 190
+Nombre de 'R' : 84, Nombre de 'N' : 1
+Ligne 105, Colonnes 106 à 191
+Nombre de 'R' : 87, Nombre de 'N' : 2
+Ligne 106, Colonnes 104 à 192
+Nombre de 'R' : 89, Nombre de 'N' : 1
+Ligne 107, Colonnes 104 à 193
+Nombre de 'R' : 90, Nombre de 'N' : 1
+Ligne 108, Colonnes 104 à 193
+Nombre de 'R' : 90, Nombre de 'N' : 1
+Ligne 109, Colonnes 103 à 194
+Nombre de 'R' : 92, Nombre de 'N' : 1
+Ligne 110, Colonnes 102 à 195
+Nombre de 'R' : 94, Nombre de 'N' : 1
+Ligne 111, Colonnes 101 à 195
+Nombre de 'R' : 95, Nombre de 'N' : 1
+Ligne 112, Colonnes 100 à 196
+Nombre de 'R' : 97, Nombre de 'N' : 1
+Ligne 113, Colonnes 100 à 197
+Nombre de 'R' : 98, Nombre de 'N' : 1
+Ligne 114, Colonnes 100 à 197
+Nombre de 'R' : 98, Nombre de 'N' : 1
+Ligne 115, Colonnes 98 à 198
+Nombre de 'R' : 101, Nombre de 'N' : 1
+Ligne 116, Colonnes 98 à 199
+Nombre de 'R' : 102, Nombre de 'N' : 1
+Ligne 117, Colonnes 97 à 199
+Nombre de 'R' : 103, Nombre de 'N' : 1
+Ligne 118, Colonnes 97 à 199
+Nombre de 'R' : 103, Nombre de 'N' : 1
+Ligne 119, Colonnes 96 à 200
+Nombre de 'R' : 105, Nombre de 'N' : 1
+Ligne 120, Colonnes 96 à 200
+Nombre de 'R' : 105, Nombre de 'N' : 1
+Ligne 121, Colonnes 96 à 201
+Nombre de 'R' : 106, Nombre de 'N' : 1
+Ligne 122, Colonnes 154 à 201
+Nombre de 'R' : 106, Nombre de 'N' : 2
+Ligne 123, Colonnes 157 à 202
+Nombre de 'R' : 103, Nombre de 'N' : 4
+Ligne 124, Colonnes 159 à 203
+Nombre de 'R' : 101, Nombre de 'N' : 3
+Ligne 125, Colonnes 158 à 203
+Nombre de 'R' : 104, Nombre de 'N' : 2
+Ligne 126, Colonnes 158 à 203
+Nombre de 'R' : 104, Nombre de 'N' : 3
+Ligne 127, Colonnes 158 à 204
+Nombre de 'R' : 107, Nombre de 'N' : 2
+Ligne 128, Colonnes 157 à 204
+Nombre de 'R' : 110, Nombre de 'N' : 2
+Ligne 129, Colonnes 92 à 204
+Nombre de 'R' : 113, Nombre de 'N' : 1
+Ligne 130, Colonnes 92 à 204
+Nombre de 'R' : 113, Nombre de 'N' : 1
+Ligne 131, Colonnes 92 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 132, Colonnes 92 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 133, Colonnes 92 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 134, Colonnes 92 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 135, Colonnes 92 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 136, Colonnes 92 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 137, Colonnes 91 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 138, Colonnes 91 à 204
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 139, Colonnes 91 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 140, Colonnes 91 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 141, Colonnes 172 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 2
+Ligne 142, Colonnes 171 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 2
+Ligne 143, Colonnes 170 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 2
+Ligne 144, Colonnes 173 à 205
+Nombre de 'R' : 114, Nombre de 'N' : 2
+Ligne 145, Colonnes 173 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 3
+Ligne 146, Colonnes 91 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 147, Colonnes 91 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 148, Colonnes 91 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 149, Colonnes 91 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 150, Colonnes 91 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 151, Colonnes 91 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 152, Colonnes 105 à 205
+Nombre de 'R' : 115, Nombre de 'N' : 3
+Ligne 153, Colonnes 105 à 204
+Nombre de 'R' : 113, Nombre de 'N' : 2
+Ligne 154, Colonnes 91 à 204
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 155, Colonnes 91 à 204
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 156, Colonnes 90 à 204
+Nombre de 'R' : 115, Nombre de 'N' : 1
+Ligne 157, Colonnes 90 à 203
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 158, Colonnes 90 à 203
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 159, Colonnes 90 à 203
+Nombre de 'R' : 114, Nombre de 'N' : 1
+Ligne 160, Colonnes 93 à 203
+Nombre de 'R' : 115, Nombre de 'N' : 2
+Ligne 161, Colonnes 93 à 202
+Nombre de 'R' : 113, Nombre de 'N' : 2
+Ligne 162, Colonnes 94 à 202
+Nombre de 'R' : 111, Nombre de 'N' : 2
+Ligne 163, Colonnes 94 à 201
+Nombre de 'R' : 110, Nombre de 'N' : 2
+Ligne 164, Colonnes 94 à 201
+Nombre de 'R' : 110, Nombre de 'N' : 2
+Ligne 165, Colonnes 95 à 201
+Nombre de 'R' : 110, Nombre de 'N' : 2
+Ligne 166, Colonnes 95 à 200
+Nombre de 'R' : 108, Nombre de 'N' : 2
+Ligne 167, Colonnes 96 à 200
+Nombre de 'R' : 107, Nombre de 'N' : 2
+Ligne 168, Colonnes 96 à 199
+Nombre de 'R' : 106, Nombre de 'N' : 2
+Ligne 169, Colonnes 97 à 199
+Nombre de 'R' : 105, Nombre de 'N' : 2
+Ligne 170, Colonnes 98 à 198
+Nombre de 'R' : 103, Nombre de 'N' : 2
+Ligne 171, Colonnes 98 à 198
+Nombre de 'R' : 104, Nombre de 'N' : 2
+Ligne 172, Colonnes 99 à 197
+Nombre de 'R' : 102, Nombre de 'N' : 2
+Ligne 173, Colonnes 99 à 197
+Nombre de 'R' : 101, Nombre de 'N' : 2
+Ligne 174, Colonnes 100 à 196
+Nombre de 'R' : 99, Nombre de 'N' : 2
+Ligne 175, Colonnes 101 à 196
+Nombre de 'R' : 98, Nombre de 'N' : 2
+Ligne 176, Colonnes 101 à 195
+Nombre de 'R' : 97, Nombre de 'N' : 2
+Ligne 177, Colonnes 102 à 195
+Nombre de 'R' : 95, Nombre de 'N' : 2
+Ligne 178, Colonnes 103 à 193
+Nombre de 'R' : 93, Nombre de 'N' : 2
+Ligne 179, Colonnes 104 à 192
+Nombre de 'R' : 91, Nombre de 'N' : 2
+Ligne 180, Colonnes 105 à 192
+Nombre de 'R' : 90, Nombre de 'N' : 2
+Ligne 181, Colonnes 106 à 191
+Nombre de 'R' : 88, Nombre de 'N' : 2
+Ligne 182, Colonnes 107 à 190
+Nombre de 'R' : 86, Nombre de 'N' : 2
+Ligne 183, Colonnes 108 à 190
+Nombre de 'R' : 85, Nombre de 'N' : 2
+Ligne 184, Colonnes 109 à 189
+Nombre de 'R' : 83, Nombre de 'N' : 2
+Ligne 185, Colonnes 110 à 188
+Nombre de 'R' : 81, Nombre de 'N' : 2
+Ligne 186, Colonnes 111 à 188
+Nombre de 'R' : 80, Nombre de 'N' : 2
+Ligne 187, Colonnes 112 à 187
+Nombre de 'R' : 78, Nombre de 'N' : 2
+Ligne 188, Colonnes 186 à 187
+Nombre de 'R' : 74, Nombre de 'N' : 3
+Ligne 189, Colonnes 185 à 186
+Nombre de 'R' : 71, Nombre de 'N' : 3
+Ligne 190, Colonnes 185 à 186
+Nombre de 'R' : 69, Nombre de 'N' : 3
+Ligne 191, Colonnes 185 à 185
+Nombre de 'R' : 66, Nombre de 'N' : 3
+Ligne 192, Colonnes 184 à 185
+Nombre de 'R' : 61, Nombre de 'N' : 3
+Ligne 193, Colonnes 183 à 184
+Nombre de 'R' : 59, Nombre de 'N' : 3
+Ligne 194, Colonnes 183 à 184
+Nombre de 'R' : 53, Nombre de 'N' : 3
+Ligne 195, Colonnes 183 à 183
+Nombre de 'R' : 48, Nombre de 'N' : 3
+Ligne 196, Colonnes 182 à 182
+Nombre de 'R' : 43, Nombre de 'N' : 3
+Ligne 197, Colonnes 181 à 182
+Nombre de 'R' : 38, Nombre de 'N' : 3
+Ligne 198, Colonnes 180 à 182
+Nombre de 'R' : 29, Nombre de 'N' : 3
+Ligne 199, Colonnes 179 à 181
+Nombre de 'R' : 18, Nombre de 'N' : 3
+Ligne 200, Colonnes 179 à 180
+Nombre de 'R' : 5, Nombre de 'N' : 2
+Ligne 201, Colonnes 178 à 179
+Nombre de 'R' : 5, Nombre de 'N' : 2
+Ligne 202, Colonnes 176 à 177
+Nombre de 'R' : 6, Nombre de 'N' : 2
+Ligne 203, Colonnes 176 à 177
+Nombre de 'R' : 6, Nombre de 'N' : 3
+Ligne 204, Colonnes 175 à 176
+Nombre de 'R' : 6, Nombre de 'N' : 2
+Ligne 205, Colonnes 173 à 175
+Nombre de 'R' : 7, Nombre de 'N' : 2
+Ligne 206, Colonnes 172 à 174
+Nombre de 'R' : 7, Nombre de 'N' : 2
+Ligne 207, Colonnes 170 à 172
+Nombre de 'R' : 5, Nombre de 'N' : 2
+Ligne 208, Colonnes 170 à 171
+Nombre de 'R' : 6, Nombre de 'N' : 2
+Ligne 209, Colonnes 167 à 170
+Nombre de 'R' : 8, Nombre de 'N' : 2
+Ligne 210, Colonnes 166 à 169
+Nombre de 'R' : 8, Nombre de 'N' : 2
+Ligne 211, Colonnes 163 à 168
+Nombre de 'R' : 11, Nombre de 'N' : 2
+Ligne 212, Colonnes 162 à 164
+Nombre de 'R' : 8, Nombre de 'N' : 2
+Ligne 213, Colonnes 160 à 161
+Nombre de 'R' : 7, Nombre de 'N' : 2
+Ligne 214, Colonnes 156 à 160
+Nombre de 'R' : 12, Nombre de 'N' : 2
+Ligne 215, Colonnes 151 à 157
+Nombre de 'R' : 14, Nombre de 'N' : 3
+Ligne 216, Colonnes 146 à 152
+Nombre de 'R' : 16, Nombre de 'N' : 3
+Ligne 217, Colonnes 125 à 150
+Nombre de 'R' : 26, Nombre de 'N' : 1
+Ligne 218, Colonnes 146 à 146
+Nombre de 'R' : 17, Nombre de 'N' : 4
+Ligne 219, Colonnes 135 à 135
+Nombre de 'R' : 1, Nombre de 'N' : 1
+Ligne 295, Colonnes 41 à 44
+Nombre de 'R' : 4, Nombre de 'N' : 1
+Ligne 296, Colonnes 44 à 44
+Nombre de 'R' : 2, Nombre de 'N' : 2

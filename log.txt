@@ -1,0 +1,24 @@
+Requête : avance
+ 
+Verbe : avance
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : tourne
+ 
+Verbe : tourne
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : va vers la balle rouge
+ 
+Verbe : va
+Nom : balle
+Couleur : rouge
+Requête valide.
+Le robot avance de 5 m.
+Le robot tourne de 45°.
+Le robot avance vers la balle rouge
+Saissisez une distance : 5
+Saissisez un angle : 45
+la balle rouge

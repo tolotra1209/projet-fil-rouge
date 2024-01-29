@@ -1,0 +1,7 @@
+rouge
+vert
+verte
+bleu
+bleue
+jaune
+orange

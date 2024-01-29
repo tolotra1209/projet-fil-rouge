@@ -1,0 +1,5 @@
+Moves forward
+Moves forward to the Color Obstacle
+Turn
+Moves forward to the Red Ball
+Moves forward to the Gree Ball
