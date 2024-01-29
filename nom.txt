@@ -1,3 +1,0 @@
-balle
-cube
-obstacle

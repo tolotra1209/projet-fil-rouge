@@ -1,3 +1,0 @@
-Go_forward(int distance)
-Turn(int angle)
-Go_forward(int distance)
