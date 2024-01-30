@@ -1,0 +1,181 @@
+Script started on 2024-01-30 17:45:21+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+[?2004h]0;toto@Ubuntu: ~/Desktop/versus[01;32mtoto@Ubuntu[00m:[01;34m~/Desktop/versus[00m$ make clean
+[?2004lrm -f *.o
+[?2004h]0;toto@Ubuntu: ~/Desktop/versus[01;32mtoto@Ubuntu[00m:[01;34m~/Desktop/versus[00m$ make
+[?2004lgcc -c main.c
+gcc -c Language.c
+gcc -c color.c
+gcc -c Lexique.c
+gcc -c choix_langue.c
+gcc -c requete_texte.c
+gcc -c conversion_requete.c
+gcc -c execution.c
+gcc -c image.c
+gcc -o main.out main.o Language.o color.o Lexique.o choix_langue.o requete_texte.o conversion_requete.o execution.o image.o
+[?2004h]0;toto@Ubuntu: ~/Desktop/versus[01;32mtoto@Ubuntu[00m:[01;34m~/Desktop/versus[00m$ ./main.out
+[?2004lContenu de la liste chainee de langue :
+Anglais
+Français
+
+Contenu de la liste chainee de couleur :
+rouge
+bleu
+vert
+jaune
+bleue
+
+Voici le lexique 
+Contenu de la liste chainee de nom :
+balle
+cube
+obstacle
+
+Contenu de la liste chainee de verbe :
+avance
+va
+recule
+tourne
+positionne
+
+Contenu de la liste chainee de synonyme d'avance :
+avance
+progresse
+
+Contenu de la liste chainee de synonyme de Tourne :
+tourne
+pivote
+
+Veuillez entrer la langue de votre choix : Français
+Français
+Combien de requêtes voulez-vous entrer ? 3
+Saisissez une requête : avance
+Verbe: avance
+Aucun nom trouvé.
+Aucune couleur trouvée.
+Requête valide.
+Saisissez une requête : avance
+Verbe: avance
+Aucun nom trouvé.
+Aucune couleur trouvée.
+Requête valide.
+Saisissez une requête : tourne
+Verbe: tourne
+Aucun nom trouvé.
+Aucune couleur trouvée.
+Requête valide.
+
+Saissisez une distance : 15
+Le robot avance de 15 m.
+Saissisez une distance : çà  10
+Le robot avance de 10 m.
+Saissisez un angle : 45
+Le robot tourne de 45°.
+
+[?2004h]0;toto@Ubuntu: ~/Desktop/versus[01;32mtoto@Ubuntu[00m:[01;34m~/Desktop/versus[00m$ ./main.out
+[?2004lContenu de la liste chainee de langue :
+Anglais
+Français
+
+Contenu de la liste chainee de couleur :
+rouge
+bleu
+vert
+jaune
+bleue
+
+Voici le lexique 
+Contenu de la liste chainee de nom :
+balle
+cube
+obstacle
+
+Contenu de la liste chainee de verbe :
+avance
+va
+recule
+tourne
+positionne
+
+Contenu de la liste chainee de synonyme d'avance :
+avance
+progresse
+
+Contenu de la liste chainee de synonyme de Tourne :
+tourne
+pivote
+
+Veuillez entrer la langue de votre choix : Français
+Français
+Combien de requêtes voulez-vous entrer ? " 3
+Saisissez une requête : avan   vance
+Verbe: avance
+Aucun nom trouvé.
+Aucune couleur trouvée.
+Requête valide.
+Saisissez une requête : va vers la balle bleue
+Verbe: va
+Nom: balle
+Couleur: bleue
+Requête valide.
+Saisissez une requête : va vers la balle rouge
+Verbe: va
+Nom: balle
+Couleur: rouge
+Requête valide.
+
+Saissisez une distance : 10
+Le robot avance de 10 m.
+Le robot avance vers aucune balle bleue
+Le robot avance vers aucune balle bleue
+
+[?2004h]0;toto@Ubuntu: ~/Desktop/versus[01;32mtoto@Ubuntu[00m:[01;34m~/Desktop/versus[00m$ ./main.out
+[?2004lContenu de la liste chainee de langue :
+Anglais
+Français
+
+Contenu de la liste chainee de couleur :
+rouge
+bleu
+vert
+jaune
+bleue
+
+Voici le lexique 
+Contenu de la liste chainee de nom :
+balle
+cube
+obstacle
+
+Contenu de la liste chainee de verbe :
+avance
+va
+recule
+tourne
+positionne
+
+Contenu de la liste chainee de synonyme d'avance :
+avance
+progresse
+
+Contenu de la liste chainee de synonyme de Tourne :
+tourne
+pivote
+
+Veuillez entrer la langue de votre choix : Français
+Français
+Combien de requêtes voulez-vous entrer ? 1
+Saisissez une requête : va vers la balle bleua e
+Verbe: va
+Nom: balle
+Couleur: bleue
+Requête valide.
+
+Le robot avance vers balle bleue
+
+[?2004h]0;toto@Ubuntu: ~/Desktop/versus[01;32mtoto@Ubuntu[00m:[01;34m~/Desktop/versus[00m$ exit
+[?2004lexit
+
+Script done on 2024-01-30 17:48:48+01:00 [COMMAND_EXIT_CODE="0"]

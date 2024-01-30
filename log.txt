@@ -1,0 +1,127 @@
+Requête : avance
+ 
+Verbe : avance
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : avance
+ 
+Verbe : avance
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : tourne
+ 
+Verbe : tourne
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : va vers la balle bleue
+ 
+Verbe : va
+Nom : balle
+Couleur : bleue
+Requête valide.
+Le robot avance vers balle bleue
+Langue choisie : Français 
+Le robot tourne de 90°.
+Le robot avance de 5 m.
+Le robot avance de 10 m.
+Requête : va vers la balle bleue
+ 
+Verbe : va
+Nom : balle
+Couleur : bleue
+Requête valide.
+Le robot avance vers balle bleue
+Langue choisie : FR 
+Requête : va vers la balle rouge
+ 
+Verbe : va
+Nom : balle
+Couleur : rouge
+Requête valide.
+Le robot avance vers aucune balle rouge
+Langue choisie : FR 
+Requête : avance
+ 
+Verbe : avance
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Langue choisie : FR 
+Le robot avance de 12 m.
+Requête : avance
+ 
+Verbe : avance
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : tourne
+ 
+Verbe : tourne
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : va vers la balle bleue
+ 
+Verbe : va
+Nom : balle
+Couleur : bleue
+Requête valide.
+Le robot avance vers balle bleue
+Langue choisie : Français 
+Le robot tourne de 45°.
+Le robot avance de 10 m.
+Requête : avance
+ 
+Verbe : avance
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : avance
+ 
+Verbe : avance
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : tourne
+ 
+Verbe : tourne
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Langue choisie : Français 
+Le robot tourne de 45°.
+Le robot avance de 10 m.
+Le robot avance de 15 m.
+Requête : avance
+ 
+Verbe : avance
+Aucun nom trouvé. 
+Aucune couleur trouvée. 
+Requête valide.
+Requête : va vers la balle bleue
+ 
+Verbe : va
+Nom : balle
+Couleur : bleue
+Requête valide.
+Requête : va vers la balle rouge
+ 
+Verbe : va
+Nom : balle
+Couleur : rouge
+Requête valide.
+Le robot avance vers aucune balle bleue
+Le robot avance vers aucune balle bleue
+Langue choisie : Français 
+Le robot avance de 10 m.
+Requête : va vers la balle bleue
+ 
+Verbe : va
+Nom : balle
+Couleur : bleue
+Requête valide.
+Le robot avance vers balle bleue
+Langue choisie : Français 
