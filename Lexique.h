@@ -1,3 +1,5 @@
+/RANDRIAMAROVELO Tolotra	
+
 #ifndef LEXIQUE_H
 #define LEXIQUE_H
 
