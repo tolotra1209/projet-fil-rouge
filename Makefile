@@ -1,3 +1,5 @@
+//RANDRIAMAROVELO Tolotra	
+
 main.out: main.o Language.o color.o Lexique.o requete_texte.o choix_langue.o conversion_requete.o execution.o traitement_image.o
 	gcc -o main.out main.o Language.o color.o Lexique.o requete_texte.o choix_langue.o conversion_requete.o execution.o traitement_image.o
 
