@@ -1,8 +1,9 @@
+//BASTIDE Guillaume
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// Fonction pour déterminer si un mot est présent dans un fichier
 int estPresentDansFichier(const char *mot, const char *nomFichier) {
     FILE *fichier = fopen(nomFichier, "r");
     if (fichier == NULL) {
@@ -10,35 +11,32 @@ int estPresentDansFichier(const char *mot, const char *nomFichier) {
         exit(EXIT_FAILURE);
     }
 
-    char ligne[100]; // Taille maximale d'une ligne, ajustez si nécessaire
+    char ligne[100];
 
     while (fgets(ligne, sizeof(ligne), fichier) != NULL) {
-        // Supprimer le caractère de nouvelle ligne à la fin, s'il existe
         ligne[strcspn(ligne, "\n")] = 0;
 
-        // Comparer le mot avec la ligne lue
         if (strcmp(mot, ligne) == 0) {
             fclose(fichier);
-            return 1; // Le mot est présent dans le fichier
+            return 1;
         }
     }
 
     fclose(fichier);
-    return 0; // Le mot n'est pas présent dans le fichier
+    return 0;
 }
 
-// Fonction pour effacer le contenu du fichier
 void effacer_contenu_fichier(const char *nomFichier) {
     FILE *fichier = fopen(nomFichier, "w");
     if (fichier == NULL) {
         perror("Erreur lors de l'ouverture du fichier");
         exit(EXIT_FAILURE);
     }
-    fclose(fichier);  // Fermer le fichier après l'effacement
+    fclose(fichier);
 }
 
 int main() {
-    // Effacer le contenu du fichier "commande.txt" au début de chaque exécution
+    
     effacer_contenu_fichier("commande.txt");
 
     FILE *fichierRequete = fopen("requete_valide.txt", "r");
@@ -49,10 +47,9 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    char mot[100]; // Taille maximale d'un mot, ajustez si nécessaire
+    char mot[100];
 
     while (fscanf(fichierRequete, "%s", mot) == 1) {
-        // Ouvrir le fichier de commande en mode "a" pour ajouter du contenu sans effacer
         fichierCommande = fopen("commande.txt", "a");
         if (fichierCommande == NULL) {
             perror("Erreur lors de l'ouverture du fichier de commande");
@@ -65,7 +62,7 @@ int main() {
             fprintf(fichierCommande, "Turn()");
         }
 
-        fprintf(fichierCommande, "\n"); // Ajouter toujours un saut de ligne
+        fprintf(fichierCommande, "\n");
 
         fclose(fichierCommande);
     }
