@@ -1,3 +1,5 @@
+//RANDRIAMAROVELO Tolotra	
+
 #ifndef SAISIE_REQUETE_H
 #define SAISIE_REQUETE_H
 
