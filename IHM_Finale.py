@@ -1,4 +1,5 @@
 #BASTIDE Guillaume RANDRIAMAROVELO Tolotra	
+#IHM conservée pour la partie 2 du projet
 
 import tkinter
 from tkinter import *
