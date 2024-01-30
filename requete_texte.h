@@ -1,3 +1,5 @@
+//BASTIDE Guillaume
+
 #ifndef REQUETE_TEXTE_H
 #define REQUETE_TEXTE_H
 
