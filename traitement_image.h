@@ -1,3 +1,5 @@
+//GLOUX Nicolas
+
 #ifndef TRAITEMENT_IMAGE_H
 #define TRAITEMENT_IMAGE_H
 
