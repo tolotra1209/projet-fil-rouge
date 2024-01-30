@@ -1,3 +1,5 @@
+//BASTIDE Guillaume
+
 #ifndef CONVERSION_REQUETE_H
 #define CONVERSION_REQUETE_H
 
