@@ -1,3 +1,6 @@
+//BASTIDE Guillaume
+//code non conservé après réunion avec le client, il ne convient pas à ses attentes, trop compliqué
+
 #include <stdio.h>
 #include <string.h>
 
