@@ -1,3 +1,5 @@
+//BASTIDE Guillaume RANDRIAMAROVELO Tolotra	
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
