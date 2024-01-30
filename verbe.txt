@@ -1,4 +1,0 @@
-avance
-recule
-tourne
-positionne

@@ -1,4 +1,0 @@
-rouge
-bleu
-vert
-jaune
