@@ -1,3 +1,5 @@
+//BASTIDE Guillaume
+
 #include <stdio.h>
 #include <string.h>
 
