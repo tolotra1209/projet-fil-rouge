@@ -87,8 +87,7 @@ int requete_correcte(char ligne[MAX_WORD_LENGTH], char verbes[MAX_WORDS][MAX_WOR
         mot = strtok(NULL, " \t\n");
         position++;
     }
-
-    // La condition de validité est simplifiée
+	
     if (verbePresent && (position < 5 || (position >= 5 && nomPresent && couleurPresent))) {
         return 1;
     } else {
@@ -117,13 +116,11 @@ void analyser_phrases(char verbes[MAX_WORDS][MAX_WORD_LENGTH], int nbVerbes,
         perror("Erreur lors de l'ouverture du fichier");
        
     }
-    // Supprimer le caractère de nouvelle ligne s'il est présent
+
     requete[strcspn(requete, "\n")] = '\0';
 
-    // Initialiser un pointeur pour parcourir les mots dans la requête
     char *mot = strtok(requete, " \t\n");
 
-    // Vérifier si le premier mot est un verbe
     if (mot != NULL) {
         if (!verbe_present(mot, verbes, nbVerbes)) {
             //printf("Verbe invalide : %s\n", mot);
@@ -138,11 +135,9 @@ void analyser_phrases(char verbes[MAX_WORDS][MAX_WORD_LENGTH], int nbVerbes,
         return;
     }
 
-    // Ignorer le deuxième et le troisième mot (pour votre structure spécifique)
     mot = strtok(NULL, " \t\n");
     mot = strtok(NULL, " \t\n");
-
-    // Récupérer le quatrième mot (nom) s'il existe
+	
     mot = strtok(NULL, " \t\n");
     if (mot != NULL) {
         if (!nom_present(mot, noms, nbNoms)) {
@@ -158,7 +153,6 @@ void analyser_phrases(char verbes[MAX_WORDS][MAX_WORD_LENGTH], int nbVerbes,
         fprintf(fichierLog,"Aucun nom trouvé. \n");
     }
 
-    // Récupérer le cinquième mot (couleur) s'il existe
     mot = strtok(NULL, " \t\n");
     if (mot != NULL) {
         if (!couleur_present(mot, couleurs, nbCouleurs)) {
@@ -169,32 +163,25 @@ void analyser_phrases(char verbes[MAX_WORDS][MAX_WORD_LENGTH], int nbVerbes,
         //printf("Couleur: %s\n", mot);
         fprintf(fichierLog,"Couleur : %s\n",mot);
 
-        // Si la requête est correcte selon votre logique
-        // Écrire la couleur dans le fichier "couleur_obstacle.txt"
         FILE *fichierCouleur = fopen("couleur_obstacle.txt", "a");
         if (fichierCouleur == NULL) {
             perror("Erreur lors de l'ouverture du fichier couleur_obstacle.txt");
             exit(EXIT_FAILURE);
         }
 
-        fprintf(fichierCouleur, "%s\n", mot);  // mot contient la couleur
+        fprintf(fichierCouleur, "%s\n", mot);
         fclose(fichierCouleur);
     } else {
         //printf("Aucune couleur trouvée.\n");
         fprintf(fichierLog,"Aucune couleur trouvée. \n");
     }
 
-   
-
-    // Écrire la requête valide dans le fichier "requete_valide.txt"
     ecrire_requete_valide(requete, "requete_valide.txt");
     printf("Requête valide.\n");
     fprintf(fichierLog,"Requête valide.\n");
     
-    
     fclose(fichierLog);
 }
-
 
 void saisir_texte(char requete[MAX_WORDS], const char *nomFichier) {
     printf("Saisissez une requête : ");
@@ -205,7 +192,6 @@ void saisir_texte(char requete[MAX_WORDS], const char *nomFichier) {
        
     }
     
-
     if (fgets(requete, MAX_WORD_LENGTH, stdin) == NULL) {
         perror("Erreur lors de la saisie de la requête");
         exit(EXIT_FAILURE);
@@ -224,5 +210,3 @@ void effacer_contenu_fichier(const char *nomFichier) {
     }
     fclose(fichier);
 }
-
-
